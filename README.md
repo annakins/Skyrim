@@ -4,7 +4,7 @@ This guide is for those that want a clean modding and scripting environment.
 ### Install Skyrim
 - Install Skyrim (NOT in Program Files, ex: D: Games) and set it so it only updates when you launch it.
 - Run once.
-- Download and run FULL Downgrade Patcher: https://www.nexusmods.com/skyrimspecialedition/mods/57618?tab=files
+
 ### Install Creation Kit + Fixes
 - Download Bethesda Launcher if needed: https://bethesda.net/en/game/bethesda-launcher
 - Install Creation Kit from Bethesda Launcher (should be in Skyrim directory).
