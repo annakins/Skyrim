@@ -12,7 +12,7 @@ This guide is for those that want a clean modding and scripting environment.
 - Download and drag SSE CreationKitFixes https://www.nexusmods.com/skyrimspecialedition/mods/20061 into Skyrim folder (ALSO download FaceFXwrapper).
 - Download CreationKitCustom.ini https://www.nexusmods.com/skyrimspecialedition/mods/19817 Copy the ini to your Skyrim folder.
 - FaceFXwrapper: Paste Tools to Skyrim directory.
-- Download FonixData.cdf https://www.nexusmods.com/newvegas/mods/61248/. Create new folders in Skyrim directory/Data: Sound > Voice. Drag Processing in Voice.
+- Download FonixData.cdf https://www.nexusmods.com/newvegas/mods/61248/. Create a new folder in Skyrim directory/Data named Sound. Inside it, create a new folder named Voice. Drag Processing in Voice.
 - I recommend adding all of these files into your ``SkyrimFresh`` folder. There are more files below that you may want to add to this folder. 
 ### Download SKSE
 - https://skse.silverlock.org/ Get the one for SE, not AE. Open the contents of that zip so it shows "src, data, etc".
