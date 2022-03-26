@@ -1,5 +1,5 @@
 # Skyrim Modding
-This guide is for those that want a clean modding and scripting environment.
+This guide is for those that want a clean modding and scripting environment. NEEDS TO BE UPDATED!
 
 ### Install Skyrim
 - Install Skyrim (NOT in Program Files, ex: D: Games) and set it so it only updates when you launch it.
