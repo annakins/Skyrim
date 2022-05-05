@@ -29,3 +29,8 @@
 
 #### Why does hair look weird/yellow/glowy/orange in different angles?
 - Disable or tweak `Cloud Shadows`.
+
+#### What's affecting skin glossiness?
+- 
+#### What's affecting object glossiness?
+- 
