@@ -9,7 +9,7 @@
 ### Tweaks
 
 #### Why does hair look funny? 
-- Try to turn off/tweak `Detailed Shadow` and `Wet Surfaces`. Look for `Reflection Amount` in `Wet Surfaces`, if you decide not to turn it off.
+- Try to turn off/tweak `DetailedShadow` and `WETSURFACES`. Look for `ReflectionAmount` in `WETSURFACES`, if you decide not to turn it off.
 
 ![image](https://user-images.githubusercontent.com/92814468/167032260-00ce0b1b-ff71-445b-865d-14a4f84bf73e.png)
 
@@ -25,12 +25,11 @@
 #### How can I improve performance?
 - 
 #### Why is skin so saturated?
-- Tweak subsurface scattering.
+- Tweak `SUBSURFACESCATTERING`.
 
 #### Why does hair look weird/yellow/glowy/orange in different angles?
-- Disable or tweak `Cloud Shadows`.
+- Disable or tweak `CLOUDSHADOWS`.
 
-#### What's affecting skin glossiness?
-- 
-#### What's affecting object glossiness?
-- 
+#### What's affecting skin + environment glossiness?
+- Tweak `WETSURFACES`. 
+
