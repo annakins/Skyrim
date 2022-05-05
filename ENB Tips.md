@@ -9,19 +9,23 @@
 ### Tweaks
 
 #### Why does hair look funny? 
-Try to turn off/tweak `Detailed Shadow` and `Wet Surfaces`. Look for `Reflection Amount` in `Wet Surfaces`, if you decide not to turn it off.
+- Try to turn off/tweak `Detailed Shadow` and `Wet Surfaces`. Look for `Reflection Amount` in `Wet Surfaces`, if you decide not to turn it off.
 
 ![image](https://user-images.githubusercontent.com/92814468/167032260-00ce0b1b-ff71-445b-865d-14a4f84bf73e.png)
 
 #### Why does the water look green?
-
+- 
 #### How do I disable/adjust Depth of Field and Film Grain?
-
+- 
 #### Which settings are relevant to adjust to help darken/lighten lights?
-Lights as in torches?
+- Lights as in torches?
 
 #### How can one tweak the brightness?
-
+- 
 #### How can I improve performance?
-
+- 
 #### Why is skin so saturated?
+- Tweak subsurface scattering.
+
+#### Why does hair look weird/yellow/glowy/orange in different angles?
+- Disable or tweak `Cloud Shadows`.
