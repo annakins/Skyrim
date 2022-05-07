@@ -15,7 +15,15 @@
 ![image](https://user-images.githubusercontent.com/92814468/167032260-00ce0b1b-ff71-445b-865d-14a4f84bf73e.png)
 
 #### Why does the water look green?
-- 
+- Change the bright
+#### So much water reflection. Doesn't matter what I do.
+- There are mods like this, to help: https://www.nexusmods.com/skyrimspecialedition/mods/64736
+- Really depends on what mods you have. There are other brightness and reflection fixes. 
+- Also tweak the `WATER` section, evidently.
+
+#### My candles look like they're vanilla candles. The "twinkle" look is there.
+- Edit your `LIGHTSPRITE` settings.
+
 #### How do I disable/adjust Depth of Field and Film Grain?
 - 
 #### Which settings are relevant to adjust to help darken/lighten lights?
@@ -28,6 +36,9 @@
 - Uncheck `EnableComplexGrass`.
 #### Why is skin so saturated?
 - Tweak `SUBSURFACESCATTERING`.
+
+#### Fog coming from windows looks weird.
+- First, you might have some sort of mod conflict. If not the case, try tweaking the `PARTICLE` section.
 
 #### Why does hair look weird/yellow/glowy/orange in different angles?
 - Disable or tweak `CLOUDSHADOWS`.
