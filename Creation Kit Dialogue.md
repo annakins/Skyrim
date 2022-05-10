@@ -13,4 +13,4 @@
 - In the Creation Kit's Argument field in MO2, Enter `-GenerateLips:XXX.esp`.
 
 ### Issues?
-- If, for some reason, all other lip files were generated except for some... The track might just have to be longer.
+- If, for some reason, all other lip files were generated except for some... The track(s) might just have to be longer.
