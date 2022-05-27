@@ -15,7 +15,7 @@
 ![image](https://user-images.githubusercontent.com/92814468/167032260-00ce0b1b-ff71-445b-865d-14a4f84bf73e.png)
 
 #### Why does the water look green?
-- Change the bright
+- Change the brightness. Or your water mod.
 #### So much water reflection. Doesn't matter what I do.
 - There are mods like this, to help: https://www.nexusmods.com/skyrimspecialedition/mods/64736
 - Really depends on what mods you have. There are other brightness and reflection fixes. 
@@ -46,3 +46,5 @@
 #### What's affecting skin + environment glossiness?
 - Tweak `WETSURFACES`. 
 
+#### How do I get that foggy look? But not in the mountains.
+- Tweak `GAMEVOLUMETRICRAYS`.
