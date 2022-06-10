@@ -1,0 +1,15 @@
+Missing masters
+- Open Wyre Bash.
+- Right-click the file with the red box.
+- Create Dummy Masters. Press Yes.
+- Close Wyre Bash.
+- Open Overwrite folder. Delete INI Tweaks and Bashed Patch.
+- Activate dummy plugin on the right-hand side of MO2.
+- Open xEdit.
+- Right-click, Select None. Double-click on the esp you want to clean.
+- Right-click on your esp. Check for Errors. Refer to this if needed: https://www.youtube.com/watch?v=DyxDZT49CfM&t=70s
+- You are looking to delete `Error: Could not be resolved message in your records`. 
+- When you no longer have dirty records, right-click your esp.
+- Clean Masters (= Remove all unused Masters).
+- Save. Exit.
+- Go to Overwrite folder. Delete the dummy.
