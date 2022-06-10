@@ -1,4 +1,4 @@
-Missing masters
+## Missing masters
 - Open Wyre Bash.
 - Right-click the file with the red box.
 - Create Dummy Masters. Press Yes.
