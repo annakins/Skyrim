@@ -24,6 +24,9 @@
 #### My candles look like they're vanilla candles. The "twinkle" look is there.
 - Edit your `LIGHTSPRITE` settings.
 
+#### Why is there a gigantic glow around candles and things like nirnroots?
+- Edit your `LIGHTSPRITE` settings.
+
 #### How do I disable/adjust Depth of Field and Film Grain?
 - 
 #### Which settings are relevant to adjust to help darken/lighten lights?
