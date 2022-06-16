@@ -38,7 +38,9 @@
 - Uncheck `EnableLens`.
 - Uncheck `Bloom`.
 - Uncheck `DepthofField`.
-- Uncheck `ComplexFireLights`.
+- Uncheck `ComplexFireLights` and `ComplexFireLights` OR
+  - Uncheck `EnableBigRange`. in these two settings.
+ - 
 
 #### Why is skin so saturated?
 - Tweak `SUBSURFACESCATTERING`.
