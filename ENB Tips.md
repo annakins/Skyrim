@@ -36,7 +36,10 @@
 - So many ways. I personally tweak what's in `ENBEFFECT` and `ENBEFFECTPOSTPASS` first, before anything else. These sections vary so much per ENB, but you have your usual clues, like Brightness, Gamma correction, and you might as well modify Saturation and Contrast if they look incorrect. "Correct" values are typically 1 or 0. Additionally, many ENBs also come with Fake HDR. 
 #### How can I improve performance?
 - Uncheck `EnableLens`.
-- Uncheck `EnableComplexGrass`.
+- Uncheck `Bloom`.
+- Uncheck `DepthofField`.
+- Uncheck `ComplexFireLights`.
+
 #### Why is skin so saturated?
 - Tweak `SUBSURFACESCATTERING`.
 
