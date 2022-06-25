@@ -17,7 +17,7 @@
 
 #### Why does the water look green?
 - Change the brightness in the `WATER` section. Or your water mod.
-- 
+
 #### So much water reflection. Doesn't matter what I do.
 - There are mods like this, to help: https://www.nexusmods.com/skyrimspecialedition/mods/64736
 - Really depends on what mods you have. There are other brightness and reflection fixes. 
@@ -34,6 +34,9 @@
 #### Which settings are relevant to adjust to help darken/lighten lights?
 - Torches, lanterns: Go to `ENVIRONMENT` and tweak `PointLighting` (Intensity, Curve).
 
+#### Shadows look really weird. What gives?
+- Do you have [EVLaS](https://www.nexusmods.com/skyrimspecialedition/mods/63725) when your ENB doesn't use it? If it looks off, it's probably incompatible.
+
 #### How can one tweak the brightness?
 - So many ways. I personally tweak what's in `ENBEFFECT` and `ENBEFFECTPOSTPASS` first, before anything else. These sections vary so much per ENB, but you have your usual clues, like Brightness, Gamma correction, and you might as well modify Saturation and Contrast if they look incorrect. "Correct" values are typically 1 or 0. Additionally, many ENBs also come with Fake HDR. 
 #### How can I improve performance?
@@ -43,6 +46,8 @@
 - Uncheck `ComplexFireLights` and `ComplexFireLights` OR
   - Uncheck `EnableBigRange` in these two settings.
  
+#### Shiny brows? Uhh...
+- Grab [this wonderful mod](https://www.nexusmods.com/skyrimspecialedition/mods/66265) by bingus.
 
 #### Why is skin so saturated?
 - Tweak `SUBSURFACESCATTERING`. You will see saturation values. 
