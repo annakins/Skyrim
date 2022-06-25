@@ -48,6 +48,11 @@
 #### Fog coming from windows looks weird.
 - First, you might have some sort of mod conflict. If not the case, try tweaking the `PARTICLE` section.
 
+#### Webs look REALLY bright. 
+- See if [this](https://www.nexusmods.com/skyrimspecialedition/mods/29872) fixes your issue first.
+- Also check if you have the latest [Particle Patch for ENB](https://www.nexusmods.com/skyrimspecialedition/mods/65720).
+- You could also tweak the `PARTICLE` section. Specifically `LightingInfluence` and `AmbientInfluence`.
+
 #### Why does hair look weird/yellow/glowy/orange in different angles?
 - Disable or tweak `CLOUDSHADOWS`.
 
