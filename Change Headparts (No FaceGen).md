@@ -32,3 +32,5 @@ This guide is meant for existing actors that already have a FaceGen. It's also m
   - Do this for the hairline as well.
 - For the hair, click NiAlphaProperty and make sure the Flags say 4845. And the threshold should be 40.
 - For the hairline, click on NiAlphaProperty also and now the Flags should say 4844. Threshold is 128.
+
+Check vanilla facegens and hairs if helmet issue arises.
