@@ -3,7 +3,7 @@ This guide is meant for existing actors that already have a FaceGen. It's also m
 
 ## Hair
 - Let's use KS Hairs as an example. 
-- Open up the KSHairdos.esp in Creation Kit just to see what hairline the hair you want uses.
+- Open up the KSHairdos.esp in Creation Kit just to see what hairline the hair you want used.
 - Check the box for `Show only active (*) forms`. In the Filter field, look up the hair.
 - Check the Extra Parts section to see if you need to change the scalp.
 - Close Creation Kit.
