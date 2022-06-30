@@ -9,7 +9,7 @@ This guide is for those that want a clean modding and scripting environment. Ple
 - Download Bethesda Launcher if needed: https://bethesda.net/en/game/bethesda-launcher
 - Install Creation Kit from Bethesda Launcher (should be in Skyrim directory).
 - Open Creation Kit. Say NO to Scripts unpacking. Exit Creation Kit. Exit Bethesda Launcher. Go to Skyrim directory/Data. Grab that Scripts.zip file. Create a new folder, maybe in Documents, and name it ``SkyrimFresh``. Unpack Scripts.zip there. Rename ``Source`` to ``Scripts``. Then rename ``Scripts`` to ``Source``. Make this a new .zip file (should have Dialogue Views and Scripts). You can name it ``CKScripts.zip`` (or 7z). 
-- Download and drag SSE CreationKitFixes https://www.nexusmods.com/skyrimspecialedition/mods/20061 into Skyrim folder (ALSO download FaceFXwrapper).
+- Download and drag the contents of SSE CreationKitFixes https://www.nexusmods.com/skyrimspecialedition/mods/20061 into Skyrim folder (ALSO download FaceFXwrapper).
 - Download CreationKitCustom.ini https://www.nexusmods.com/skyrimspecialedition/mods/19817 Copy the ini to your Skyrim folder.
 - FaceFXwrapper: Paste Tools to Skyrim directory.
 - Download FonixData.cdf https://www.nexusmods.com/newvegas/mods/61248/. Create a new folder in Skyrim directory/Data named Sound. Inside it, create a new folder named Voice. Drag Processing in Voice.
