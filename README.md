@@ -1,4 +1,4 @@
-# Skyrim Modding
+# Skyrim Modding (+ Scripting)
 - This guide is for those that want a clean modding and scripting environment. Please read [THIS](https://github.com/chri3i/Stock-Game-for-mod-making/blob/main/README.md) if you want a stock game setup (a guide by the wonderful Styyx).
 - This guide also needs to be updated due to the sunsetting of the Bethesda Launcher.
 
