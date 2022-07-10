@@ -27,6 +27,10 @@
 <img src="https://imgur.com/x1bbbux.png" width=50%></img>
 - Tweak `FogAmountMultiplier` and other relevant values as desired in `ENVIRONMENT`.
 
+#### How do I get that foggy look?
+<img src="https://imgur.com/kBEJUoA.png" width=50%></img>
+- Tweak `GAMEVOLUMETRICRAYS` and `VOLUMETRICRAYS`.
+
 #### My candles look like they're vanilla candles. The "twinkle" look is there.
 - Edit your `LIGHTSPRITE` settings.
 
@@ -72,5 +76,4 @@
 #### What's affecting skin + environment glossiness?
 - Tweak `WETSURFACES`. 
 
-#### How do I get that foggy look? But not in the mountains.
-- Tweak `GAMEVOLUMETRICRAYS`.
+
