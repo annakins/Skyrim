@@ -23,6 +23,10 @@
 - Really depends on what mods you have. There are other brightness and reflection fixes. 
 - Also tweak the `WATER` section, evidently.
 
+#### How can I make the mountains brighter/darker?
+<img src="https://imgur.com/x1bbbux.png" width=50%></img>
+- Tweak `FogAmountMultiplier` and other relevant values as desired in `ENVIRONMENT`.
+
 #### My candles look like they're vanilla candles. The "twinkle" look is there.
 - Edit your `LIGHTSPRITE` settings.
 
