@@ -51,7 +51,7 @@
 - Uncheck `EnableLens`.
 - Uncheck `EnableBloom`.
 - Uncheck `EnableDepthofField`.
-- Uncheck `EnableTesselation`.
+- Uncheck `EnableTessellation`.
 - Uncheck `ComplexFireLights` and `ComplexFireLights` OR
   - Uncheck `EnableBigRange` in these two settings.
  
