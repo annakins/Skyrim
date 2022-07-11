@@ -77,4 +77,9 @@
 #### What's affecting skin + environment glossiness?
 - Tweak `WETSURFACES`. 
 
-
+## ENB Tweaking Areas for Consistency
+*Tweak for all times and check various weathers, if desired. Open up the console and coc to these places.*
+- `whiterunexterior01`.
+- If feeling risqué, `bleakfallsbarrowexterior`, while looking towards Whiterun.
+- `markarthsilverbloodinn`.
+- `katlasfarmexterior`, check the underwater values also.
