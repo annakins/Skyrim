@@ -15,6 +15,10 @@
 
 ![image](https://user-images.githubusercontent.com/92814468/167032260-00ce0b1b-ff71-445b-865d-14a4f84bf73e.png)
 
+#### Why are embers so red?
+- Try to tweak `WINDOWLIGHT`.
+<img src="https://imgur.com/TbmmUCx.gif" width=50%></img>
+
 #### Why does the water look green?
 - Change the brightness in the `WATER` section. Or your water mod.
 
