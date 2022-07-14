@@ -26,6 +26,11 @@
 - Really depends on what mods you have. There are other brightness and reflection fixes. 
 - Also tweak the `WATER` section, evidently.
 
+#### When I move from what seems like the same location, the weather suddenly changes.
+- You likely have a weather forced by location. To remove this, go into your `enbseries` folder and look for `_locationweather.ini`.
+<img src="https://imgur.com/tlCwuGe.png" width=70%></img>
+<img src="https://imgur.com/W3yIckx.png" width=70%></img>
+
 #### How can I make the mountains brighter/darker?
 <img src="https://imgur.com/x1bbbux.png" width=50%></img>
 - Tweak `FogAmountMultiplier` and other relevant values as desired in `ENVIRONMENT`.
