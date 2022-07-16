@@ -5,7 +5,7 @@
 - Get VC++ here: https://aka.ms/vs/16/release/vc_redist.x64.exe
 
 ### Install Skyrim
-- Install Skyrim (NOT in Program Files, ex: D: Games) and set it so it [only updates when you launch it](https://help.steampowered.com/en/faqs/view/71AB-698D-57EB-178C#disable).
+- Install Skyrim (NOT in Program Files, ex: X: Games) and set it so it [only updates when you launch it](https://help.steampowered.com/en/faqs/view/71AB-698D-57EB-178C#disable).
 
 - Run once. Go ahead and let the Creation Club content download. 
 - You don't have to start a new game. Press Quit.
