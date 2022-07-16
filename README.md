@@ -1,5 +1,5 @@
 # Skyrim Anniversary Edition Modding (+ Scripting)
-- This guide is for those that want a clean modding and scripting environment. Please read [THIS](https://github.com/chri3i/Stock-Game-for-mod-making/blob/main/README.md) if you want a stock game setup (a guide by the wonderful Styyx).
+- This guide is for those that want a clean modding and scripting environment. 
 
 ### Pre-Installation
 - Get VC++ here: https://aka.ms/vs/16/release/vc_redist.x64.exe
@@ -54,6 +54,17 @@
 - Open the `SSE Creation Kit Fixes Update` folder. Copy all contents and paste into the `Stock Game` folder. Replace the files.
 - Create a new folder in `Stock Game/Data` named `Sound`. Inside it, create a new folder named `Voice`. Open the `FonixData` folder in `SkyrimFresh` and drag `Processing` into `Voice`.
 - Open `FaceFXWrapper`. Drag `Tools` into `Stock Game`.
+
+### Creation Club Content
+- Create an empty mod and call it `Creation Club Content`.
+- <img src="https://imgur.com/NbNG66i.png"></img>
+- Enable it and put it above `CKScripts` and `SKSEScripts`.
+- Right-click that new mod you made, and open it in explorer.
+- Go into the `Data` folder in `Stock Game`.
+- Move (do not copy) all of the CC content into the `Creation Club Content` folder you made.
+- ![image](https://user-images.githubusercontent.com/92814468/179336537-54735f55-dab7-48a4-b98e-7fb109d51a63.png)
+- Refresh MO2, and voila.
+- ![image](https://user-images.githubusercontent.com/92814468/179336621-40eedb70-6671-4b3a-abef-241976c11e52.png)
 
 
 #### IF going to use Visual Studio Code, skip NotePad++. 
