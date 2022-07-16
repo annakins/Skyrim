@@ -1,16 +1,27 @@
 # Skyrim Modding (+ Scripting)
 - This guide is for those that want a clean modding and scripting environment. Please read [THIS](https://github.com/chri3i/Stock-Game-for-mod-making/blob/main/README.md) if you want a stock game setup (a guide by the wonderful Styyx).
-- This guide also needs to be updated due to the sunsetting of the Bethesda Launcher.
+
+### Pre-Installation
+- Get VC++ here: https://aka.ms/vs/16/release/vc_redist.x64.exe
 
 ### Install Skyrim
-- Install Skyrim (NOT in Program Files, ex: D: Games) and set it so it only updates when you launch it.
-- Run once.
+- Install Skyrim (NOT in Program Files, ex: D: Games) and set it so it [only updates when you launch it](https://help.steampowered.com/en/faqs/view/71AB-698D-57EB-178C#disable).
+
+- Run once. Go ahead and let the Creation Club content download, if you have the Anniversary Edition (paid). 
+- You don't have to start a new game. Press Quit.
 
 ### Install Creation Kit + Fixes
-- Download Bethesda Launcher if needed: https://bethesda.net/en/game/bethesda-launcher
-- Install Creation Kit from Bethesda Launcher (should be in Skyrim directory).
-- Open Creation Kit. Say NO to Scripts unpacking. Exit Creation Kit. Exit Bethesda Launcher. Go to Skyrim directory/Data. Grab that Scripts.zip file. Create a new folder, maybe in Documents, and name it ``SkyrimFresh``. Unpack Scripts.zip there. Rename ``Source`` to ``Scripts``. Then rename ``Scripts`` to ``Source``. Make this a new .zip file (should have Dialogue Views and Scripts). You can name it ``CKScripts.zip`` (or 7z). 
-- Download and drag the contents of SSE CreationKitFixes https://www.nexusmods.com/skyrimspecialedition/mods/20061 into Skyrim folder (ALSO download FaceFXwrapper).
+- Download `Skyrim Special Edition: Creation Kit` on Steam. 
+- Open Creation Kit. Say NO to Scripts unpacking. Exit Creation Kit. 
+- Go to your Skyrim directory/Data: `X:\Games\steamapps\common\Skyrim Special Edition\Data`. Copy that `Scripts.zip` file. 
+- Go to a folder like `My Documents`, and create a new folder like `SkyrimFresh`. Paste and unpack `Scripts.zip` there. 
+- Delete `Scripts.zip` in that `SkyrimFresh` folder.
+- You'll now see `DialogueViews` and `Source`.
+- Rename ``Source`` to ``Scripts``. Open that folder. Rename ``Scripts`` to ``Source``. So it has to be `Scripts > Source`. NOT Source > Scripts.
+- Go back to where you see `DialogueViews` and `Scripts`.
+- Add both `DialogueViews` and `Scripts` into a .zip file. You can name it ``CKScripts.zip`` (or 7z). You can delete both the `DialogueViews` and `Scripts` folders after successfully placing them into a .zip file.
+- Download SSE CreationKitFixes and FaceFXwrapper https://www.nexusmods.com/skyrimspecialedition/mods/20061 and add them to your `SkyrimFresh` folder.
+- Download SSE Creation Kit Fixes Update https://www.nexusmods.com/skyrimspecialedition/mods/71371 and a
 - Download CreationKitCustom.ini https://www.nexusmods.com/skyrimspecialedition/mods/19817 Copy the ini to your Skyrim folder.
 - FaceFXwrapper: Paste Tools to Skyrim directory.
 - Download FonixData.cdf https://www.nexusmods.com/newvegas/mods/61248/. Create a new folder in Skyrim directory/Data named Sound. Inside it, create a new folder named Voice. Drag Processing in Voice.
