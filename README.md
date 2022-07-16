@@ -1,4 +1,4 @@
-# Skyrim Modding (+ Scripting)
+# Skyrim Anniversary Edition Modding (+ Scripting)
 - This guide is for those that want a clean modding and scripting environment. Please read [THIS](https://github.com/chri3i/Stock-Game-for-mod-making/blob/main/README.md) if you want a stock game setup (a guide by the wonderful Styyx).
 
 ### Pre-Installation
@@ -7,7 +7,7 @@
 ### Install Skyrim
 - Install Skyrim (NOT in Program Files, ex: D: Games) and set it so it [only updates when you launch it](https://help.steampowered.com/en/faqs/view/71AB-698D-57EB-178C#disable).
 
-- Run once. Go ahead and let the Creation Club content download, if you have the Anniversary Edition (paid). 
+- Run once. Go ahead and let the Creation Club content download. 
 - You don't have to start a new game. Press Quit.
 
 ### Install Creation Kit + Fixes
@@ -20,16 +20,15 @@
 - Rename ``Source`` to ``Scripts``. Open that folder. Rename ``Scripts`` to ``Source``. So it has to be `Scripts > Source`. NOT Source > Scripts.
 - Go back to where you see `DialogueViews` and `Scripts`.
 - Add both `DialogueViews` and `Scripts` into a .zip file. You can name it ``CKScripts.zip`` (or 7z). You can delete both the `DialogueViews` and `Scripts` folders after successfully placing them into a .zip file.
-- Download SSE CreationKitFixes and FaceFXwrapper https://www.nexusmods.com/skyrimspecialedition/mods/20061 and add them to your `SkyrimFresh` folder.
-- Download SSE Creation Kit Fixes Update https://www.nexusmods.com/skyrimspecialedition/mods/71371 and a
-- Download CreationKitCustom.ini https://www.nexusmods.com/skyrimspecialedition/mods/19817 Copy the ini to your Skyrim folder.
-- FaceFXwrapper: Paste Tools to Skyrim directory.
-- Download FonixData.cdf https://www.nexusmods.com/newvegas/mods/61248/. Create a new folder in Skyrim directory/Data named Sound. Inside it, create a new folder named Voice. Drag Processing in Voice.
-- I recommend adding all of these files into your ``SkyrimFresh`` folder. There are more files below that you may want to add to this folder. 
+- Download `SSE CreationKitFixes` and `FaceFXwrapper` https://www.nexusmods.com/skyrimspecialedition/mods/20061 and add them to your `SkyrimFresh` folder.
+- Download `SSE Creation Kit Fixes Update` https://www.nexusmods.com/skyrimspecialedition/mods/71371 and add it to your `SkyrimFresh` folder.
+- Download `Tweaked Creation Kit ini` https://www.nexusmods.com/skyrimspecialedition/mods/19817 and add it to your `SkyrimFresh` folder. 
+ - Note: Only get `CK Custom ini`. 
+- Download `FonixData.cdf` https://www.nexusmods.com/newvegas/mods/61248/ and add it to your `SkyrimFresh` folder. 
 ### Download SKSE
-- https://skse.silverlock.org/ Get the one for SE, not AE. Open the contents of that zip so it shows "src, data, etc".
-- DO NOT DRAG DATA INTO THE SKYRIM DIR. Inside, you will find a Scripts folder with more contents. Right-click Scripts and zip it. Name it ``SKSEScripts.zip`` (move that to your ``SkyrimFresh`` folder)
-- Drag the skse dll, skse loader.exe, skse steam loader.dll into the Skyrim directory.
+- Get the one for Anniversary Edition https://skse.silverlock.org/ and add it to your `SkyrimFresh` folder. Extract it in there. 
+- Open the contents of that new skse folder until you see `src`, `data`, etc. Inside the `Data` folder, you will find a `Scripts` folder with more contents. Right-click `Scripts` and zip it. Name it ``SKSEScripts.zip`` and move that to your ``SkyrimFresh`` folder.
+
 ### Install MO2
 - Install latest EXE release: https://github.com/ModOrganizer2/modorganizer/releases
 - Install somewhere like D:/MO2
@@ -42,6 +41,13 @@
 - Go to Tools > INI Editor. In skyrim.ini, look for *papyrus*. Change the settings to reflect the following:
  ``bEnableLogging = 1, bEnableTrace = 1, bLoadDebugInformation = 1`` and hit Save.
 - In MO2's Executables settings, for Creation Kit, you will need to make sure that your mod is selected in *Create files in mod instead of overwrite.*
+SKSE
+- Drag the skse dll, skse loader.exe, skse steam loader.dll into the Skyrim directory.
+
+- Create a new folder in Skyrim directory/Data named Sound. Inside it, create a new folder named Voice. Drag Processing in Voice.
+- FaceFXwrapper: Paste Tools to Skyrim directory.
+- I recommend adding all of these files into your ``SkyrimFresh`` folder. There are more files below that you may want to add to this folder. 
+
 
 #### IF going to use Visual Studio Code, skip NotePad++. 
 ### NotePad++
