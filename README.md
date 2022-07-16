@@ -25,28 +25,35 @@
 - Download `Tweaked Creation Kit ini` https://www.nexusmods.com/skyrimspecialedition/mods/19817 and add it to your `SkyrimFresh` folder. 
  - Note: Only get `CK Custom ini`. 
 - Download `FonixData.cdf` https://www.nexusmods.com/newvegas/mods/61248/ and add it to your `SkyrimFresh` folder. 
+
 ### Download SKSE
 - Get the one for Anniversary Edition https://skse.silverlock.org/ and add it to your `SkyrimFresh` folder. Extract it in there. 
 - Open the contents of that new skse folder until you see `src`, `data`, etc. Inside the `Data` folder, you will find a `Scripts` folder with more contents. Right-click `Scripts` and zip it. Name it ``SKSEScripts.zip`` and move that to your ``SkyrimFresh`` folder.
 
 ### Install MO2
-- Install latest EXE release: https://github.com/ModOrganizer2/modorganizer/releases
-- Install somewhere like D:/MO2
-- Don't uncheck anything in the installation.
-- Create new portable instance.
-- Drag CKScripts.zip and SKSEScripts.zip into Downloads tab in MO2, install. Place these after the DLCs, but before your mods.
-- Go to Creation Kit settings in MO2.
-- Change theme to 1809 Dark Mode. Because *eyes*.
-- Each mod you work on requires its own profile. Make a new profile, name it after your mod, check the box for *Default Game INI Settings*. Uncheck *use profile-specific Game INI files*. Click yes.
-- Go to Tools > INI Editor. In skyrim.ini, look for *papyrus*. Change the settings to reflect the following:
- ``bEnableLogging = 1, bEnableTrace = 1, bLoadDebugInformation = 1`` and hit Save.
-- In MO2's Executables settings, for Creation Kit, you will need to make sure that your mod is selected in *Create files in mod instead of overwrite.*
-SKSE
-- Drag the skse dll, skse loader.exe, skse steam loader.dll into the Skyrim directory.
+- Grab the latest archive release here: https://github.com/ModOrganizer2/modorganizer/releases
+- Paste all the contents somewhere like X:/MO2. 
 
-- Create a new folder in Skyrim directory/Data named Sound. Inside it, create a new folder named Voice. Drag Processing in Voice.
-- FaceFXwrapper: Paste Tools to Skyrim directory.
-- I recommend adding all of these files into your ``SkyrimFresh`` folder. There are more files below that you may want to add to this folder. 
+### Stock Game
+- Create a folder called `Stock Game` in your X:/MO2 folder. 
+- Go to your Skyrim directory, where `SkyrimSE.exe` is.
+- Copy everything in there. Paste them inside the `Stock Game` folder you made in the MO2 directory.
+
+### Continue MO2 Installation
+- Open up `ModOrganizer.exe`. Press the `Create new instance` button. `Create a portable instance`.
+- When asked to select what game to manage, press `Browse...`.
+- Select your new `Stock Game` folder.
+- Press `Next`, finish that install.
+- Go to `Tools > Settings > Theme` in MO2.
+- Change theme to 1809 Dark Mode. Because *eyes*. Press OK.
+
+### SkyrimFresh Folder
+- Drag `CKScripts.zip` and `SKSEScripts.zip` into the Downloads tab in MO2, and install both. Place these after the DLCs and Creation Club content, and before any mods you make. `CKScripts` go before `SKSEScripts`.
+- Open the skse folder. Copy the skse dll, skse loader.exe, skse steam loader.dll into the `Stock Game` folder.
+- Open the `CK64Fixes Release` folder. Copy all contents and paste into the `Stock Game` folder.
+- Open the `SSE Creation Kit Fixes Update` folder. Copy all contents and paste into the `Stock Game` folder. Replace the files.
+- Create a new folder in `Stock Game/Data` named `Sound`. Inside it, create a new folder named `Voice`. Open the `FonixData` folder in `SkyrimFresh` and drag `Processing` into `Voice`.
+- Open `FaceFXWrapper`. Drag `Tools` into `Stock Game`.
 
 
 #### IF going to use Visual Studio Code, skip NotePad++. 
@@ -106,3 +113,11 @@ pause``
 
 ## Credits
 - I take no credit for what is written. I simply wanted to put together all the things I learned and wanted to share. :)
+
+
+### Needs to be updated, ignore for now
+- Go to Tools > INI Editor. In skyrim.ini, look for *papyrus*. Change the settings to reflect the following:
+ ``bEnableLogging = 1, bEnableTrace = 1, bLoadDebugInformation = 1`` and hit Save.
+- In MO2's Executables settings, for Creation Kit, you will need to make sure that your mod is selected in *Create files in mod instead of overwrite.*
+SKSE
+
