@@ -54,6 +54,7 @@
 - Open the `SSE Creation Kit Fixes Update` folder. Copy all contents and paste into the `Stock Game` folder. Replace the files.
 - Create a new folder in `Stock Game/Data` named `Sound`. Inside it, create a new folder named `Voice`. Open the `FonixData` folder in `SkyrimFresh` and drag `Processing` into `Voice`.
 - Open `FaceFXWrapper`. Drag `Tools` into `Stock Game`.
+- Copy `CreationKitCustom.ini` and paste into `Stock Game`.
 
 ### Creation Club Content
 - Create an empty mod and call it `Creation Club Content`.
