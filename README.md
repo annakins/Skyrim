@@ -1,3 +1,6 @@
+All guides here have been moved to: https://github.com/The-Animonculory/Modding-Resources
+
+
 # Skyrim Anniversary Edition Modding (+ Scripting)
 - This guide is for those that want a clean modding and scripting environment. 
 
