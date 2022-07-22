@@ -3,7 +3,7 @@
 - Please read the guide in that link. When the installation is complete, let's proceed.
 
 ## Instructions
-- To to ADT/GameRoot/CreationKitCustom.ini.
+- Go to ADT/GameRoot/CreationKitCustom.ini.
 - Find `sScriptSourceFolder` and ensure the value for that is `"Data\Scripts\Source"`.
 - Go to your original Skyrim directory. 
 - Copy the Papyrus Compiler folder.
