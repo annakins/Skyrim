@@ -1,98 +1,24 @@
-# Mod Authoring - WIP, please check ADT 
-- The CK part NEEDS to be updated (Check ADT - That CK version is MUCH faster)
-- Notes for Anna: Just change Stock Game wording to Root
-- This guide is intended to help you set up a mod authoring environment with Skyrim Anniversary Edition.
-- You'll see some similarities with this [Stock Game Setup](https://github.com/The-Animonculory/Modding-Resources/blob/main/Stock%20Game%20Setup.md) guide by Al, but that's mostly for modlist curation (Wabbajack).
-- Also, this page is a WIP as this comes from my personal repo.
+# Mod Authoring - WIP
+- Install [Animonculory Dev Tools](https://github.com/The-Animonculory/ADT/blob/main/README.md).
+- Please read the guide in that link. When the installation is complete, let's proceed.
 
-# Table of Contents
-- [A](https://github.com/The-Animonculory/Modding-Resources/blob/main/DynDOLOD.md)
-- [B](https://github.com/The-Animonculory/Modding-Resources/blob/main/Regenerating%20Faces%20in%20the%20Creation%20Kit.md)
-- [C](https://github.com/The-Animonculory/Modding-Resources/blob/main/Stock%20Game%20Setup.md)
-- [D](https://github.com/The-Animonculory/Modding-Resources/blob/main/Mod%20Creation.md)
-
-
-
-### Pre-Installation
-- Get VC++ here: https://aka.ms/vs/16/release/vc_redist.x64.exe
-
-### Install Skyrim
-- Install Skyrim (NOT in Program Files, ex: X: Games) and set it so it [only updates when you launch it](https://help.steampowered.com/en/faqs/view/71AB-698D-57EB-178C#disable).
-
-- Run once. Go ahead and let the Creation Club content download. 
-- You don't have to start a new game. Press Quit.
-
-### Install Creation Kit + Fixes
-- Download `Skyrim Special Edition: Creation Kit` on Steam. 
-- Open Creation Kit. Say NO to Scripts unpacking. Exit Creation Kit. 
-- Go to your Skyrim directory/Data: `X:\Games\steamapps\common\Skyrim Special Edition\Data`. Copy that `Scripts.zip` file. 
-- Go to a folder like `My Documents`, and create a new folder like `SkyrimFresh`. Paste and unpack `Scripts.zip` there. 
-- Delete `Scripts.zip` in that `SkyrimFresh` folder.
-- You'll now see `DialogueViews` and `Source`.
-- Rename ``Source`` to ``Scripts``. Open that folder. Rename ``Scripts`` to ``Source``. So it has to be `Scripts > Source`. NOT Source > Scripts.
-- Go back to where you see `DialogueViews` and `Scripts`.
-- Add both `DialogueViews` and `Scripts` into a .zip file. You can name it ``CKScripts.zip`` (or 7z). You can delete both the `DialogueViews` and `Scripts` folders after successfully placing them into a .zip file.
-- Download `SSE CreationKitFixes` and `FaceFXwrapper` https://www.nexusmods.com/skyrimspecialedition/mods/20061 and add them to your `SkyrimFresh` folder.
-- Download `SSE Creation Kit Fixes Update` https://www.nexusmods.com/skyrimspecialedition/mods/71371 and add it to your `SkyrimFresh` folder.
-- Download `Tweaked Creation Kit ini` https://www.nexusmods.com/skyrimspecialedition/mods/19817 and add it to your `SkyrimFresh` folder. 
-  - Note: Only get `CK Custom ini`. 
-
-### Download SKSE
-- Get the one for Anniversary Edition https://skse.silverlock.org/ and add it to your `SkyrimFresh` folder. Extract it in there, delete the .zip.
-- Open the contents of that new skse folder until you see `src`, `data`, etc. Inside the `Data` folder, you will find a `Scripts` folder with more contents. Right-click `Scripts` and zip it. Name it ``SKSEScripts.zip`` and move that to your ``SkyrimFresh`` folder.
-
-### Install MO2
-- Grab the latest archive release here: https://github.com/ModOrganizer2/modorganizer/releases
-- Paste all the contents somewhere like X:/MO2. 
-
-### Stock Game
-- Create a folder called `Stock Game` in your X:/MO2 folder. 
-- Go to your Skyrim directory, where `SkyrimSE.exe` is.
-- Copy everything in there. Paste them inside the `Stock Game` folder you made in the MO2 directory.
-
-### Continue MO2 Installation
-- Open up `ModOrganizer.exe`. Press the `Create new instance` button. `Create a portable instance`.
-- When asked to select what game to manage, press `Browse...`.
-- Select your new `Stock Game` folder.
-- Press `Next`, finish that install.
-- Go to `Tools > Settings > Theme` in MO2.
-- Change theme to 1809 Dark Mode. Because *eyes*. Press OK.
-- Press `Edit...`
-  - ![image](https://user-images.githubusercontent.com/92814468/179651311-c7b7af5d-e077-4cf9-996d-31ad7fd6569d.png)
-  - Go to where Creation Kit is.
-  - Check the box for `Overwrite Steam AppID` and add `1946180` in the field.
-
-
-### SkyrimFresh Folder
-- Drag `CKScripts.zip` and `SKSEScripts.zip` into the Downloads tab in MO2, and install both. Place these after the DLCs and Creation Club content, and before any mods you make. `CKScripts` go before `SKSEScripts`.
-- Open the skse folder. Copy the skse dll, skse loader.exe, skse steam loader.dll into the `Stock Game` folder.
-- Open the `CK64Fixes Release` folder. Copy all contents and paste into the `Stock Game` folder.
-- Open the `SSE Creation Kit Fixes Update` folder. Copy all contents and paste into the `Stock Game` folder. Replace the files.
-- Open `FaceFXWrapper`. Drag `Tools` into `Stock Game`.
-- Copy `CreationKitCustom.ini` and paste into `Stock Game`.
-
-### Creation Club Content
-- Create an empty mod and call it `Creation Club Content`.
-- <img src="https://imgur.com/NbNG66i.png"></img>
-- Enable it and put it above `CKScripts` and `SKSEScripts`.
-- Right-click that new mod you made, and open it in explorer.
-- Go into the `Data` folder in `Stock Game`.
-- Move (do not copy) all of the CC content into the `Creation Club Content` folder you made.
-- ![image](https://user-images.githubusercontent.com/92814468/179336537-54735f55-dab7-48a4-b98e-7fb109d51a63.png)
-- Refresh MO2, and voila.
-- ![image](https://user-images.githubusercontent.com/92814468/179336621-40eedb70-6671-4b3a-abef-241976c11e52.png)
-
-### Install via MO2
-- Download `FonixData File Mod Manager Install` https://www.nexusmods.com/skyrimspecialedition/mods/40971?tab=files
-- Download `Address Library` https://www.nexusmods.com/skyrimspecialedition/mods/32444?tab=files
-- Download `PapyrusUtil AE - Scripting Utility Functions` https://www.nexusmods.com/skyrimspecialedition/mods/13048?tab=description
-- Download `Engine Fixes` https://www.nexusmods.com/skyrimspecialedition/mods/17230?tab=files
-  - Part 1 via MO2.
-  - Part 2 goes into `Stock Game`. 
-- Download `Console Commands Extender` https://www.nexusmods.com/skyrimspecialedition/mods/28210
-- Download `ConsoleUtilSSE` https://www.nexusmods.com/skyrimspecialedition/mods/24858?tab=files
-- Download `More Informative Console` https://www.nexusmods.com/skyrimspecialedition/mods/19250?tab=files
-
+## Instructions
+- To to ADT/GameRoot/CreationKitCustom.ini.
+- Find `sScriptSourceFolder` and ensure the value for that is `"Data\Scripts\Source"`.
+- Go to your original Skyrim directory. 
+- Copy the Papyrus Compiler folder.
+- Go to ADT/GameRoot and paste it there.
+- Within that folder, edit ScriptCompile.bat.
+- Replace what's in there with: `cd %2 "%~dp0PapyrusCompiler" %1 -f="TESV_Papyrus_Flags.flg" -i="%~dp0..\Data\Scripts\Source" -o="%~dp0..\Data\Scripts" pause`.
+- Go to your original Skyrim directory/Data.
+- Copy Scripts.zip to the desktop (temporarily). Unpack/Extract there.
+- Rename `Source` to `Scripts`. Open that folder you just renamed. Now name `Scripts` to `Source`. Go back to desktop.
+- Zip `DialogueViews` and `Scripts` together and name that `CKScripts.zip`. 
+- Open ADT's MO2.
+- Install `CKScripts` as a mod, and place it before SKSE on the lefthand pane. Enable it.
+- You can delete both the `DialogueViews` and `Scripts` folders on your desktop now.
+- Download FaceFXwrapper https://www.nexusmods.com/skyrimspecialedition/mods/20061.
+- Open the `FaceFXWrapper` folder. Drag `Tools` into `Game Root`.
 
 # Everything else below is 100% a WIP
 ## Scripting for Mod Authoring
