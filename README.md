@@ -20,7 +20,6 @@
 - Download FaceFXwrapper https://www.nexusmods.com/skyrimspecialedition/mods/20061.
 - Open the `FaceFXWrapper` folder. Drag `Tools` into `Game Root`.
 
-# Everything else below is 100% a WIP
 ## Scripting for Mod Authoring
 ### Visual Studio Code
 - Download here: https://code.visualstudio.com/
