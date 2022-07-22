@@ -19,6 +19,7 @@
 - You can delete both the `DialogueViews` and `Scripts` folders on your desktop now.
 - Download FaceFXwrapper https://www.nexusmods.com/skyrimspecialedition/mods/20061.
 - Open the `FaceFXWrapper` folder. Drag `Tools` into `Game Root`.
+- If Creation Kit's render window is flickering for you, downgrade your NVIDIA card to 512.77.
 
 ## Scripting for Mod Authoring
 ### Visual Studio Code
