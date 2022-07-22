@@ -53,7 +53,7 @@
 - Click on the three dots here: ![Papyrus](https://cdn.discordapp.com/attachments/803257955029352518/931558480328949760/62279b5a23636b5787500448e713ad1b.png).
 - Select *Generate Skyrim Special Edition Project Files*.
 - Go to the main directory of the mod you are working on. Ex: Mod123's folder, where you typically see *meshes, scripts, textures, seq* in mods. A workspace has now been created for you. You should see a notification in the lower-right, like this: 
-![img](https://imgur.com/MVj1sIk.png)
+  - ![img](https://imgur.com/MVj1sIk.png)
 - To change which workspace you are in, press `CTRL+SHIFT+E` and if you look below, there's a *WORKSPACES* tab. You can move this tab to the top.
 
 ## Visual Studio Code Notes
