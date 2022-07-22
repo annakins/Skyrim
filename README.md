@@ -1,8 +1,17 @@
-All guides here have been moved to: https://github.com/The-Animonculory/Modding-Resources
+# Mod Authoring - WIP, please check ADT 
+- The CK part NEEDS to be updated (Check ADT - That CK version is MUCH faster)
+- Notes for Anna: Just change Stock Game wording to Root
+- This guide is intended to help you set up a mod authoring environment with Skyrim Anniversary Edition.
+- You'll see some similarities with this [Stock Game Setup](https://github.com/The-Animonculory/Modding-Resources/blob/main/Stock%20Game%20Setup.md) guide by Al, but that's mostly for modlist curation (Wabbajack).
+- Also, this page is a WIP as this comes from my personal repo.
+
+# Table of Contents
+- [A](https://github.com/The-Animonculory/Modding-Resources/blob/main/DynDOLOD.md)
+- [B](https://github.com/The-Animonculory/Modding-Resources/blob/main/Regenerating%20Faces%20in%20the%20Creation%20Kit.md)
+- [C](https://github.com/The-Animonculory/Modding-Resources/blob/main/Stock%20Game%20Setup.md)
+- [D](https://github.com/The-Animonculory/Modding-Resources/blob/main/Mod%20Creation.md)
 
 
-# Skyrim Anniversary Edition Modding (+ Scripting)
-- This guide is for those that want a clean modding and scripting environment. 
 
 ### Pre-Installation
 - Get VC++ here: https://aka.ms/vs/16/release/vc_redist.x64.exe
@@ -26,11 +35,10 @@ All guides here have been moved to: https://github.com/The-Animonculory/Modding-
 - Download `SSE CreationKitFixes` and `FaceFXwrapper` https://www.nexusmods.com/skyrimspecialedition/mods/20061 and add them to your `SkyrimFresh` folder.
 - Download `SSE Creation Kit Fixes Update` https://www.nexusmods.com/skyrimspecialedition/mods/71371 and add it to your `SkyrimFresh` folder.
 - Download `Tweaked Creation Kit ini` https://www.nexusmods.com/skyrimspecialedition/mods/19817 and add it to your `SkyrimFresh` folder. 
- - Note: Only get `CK Custom ini`. 
-- Download `FonixData.cdf` https://www.nexusmods.com/newvegas/mods/61248/ and add it to your `SkyrimFresh` folder. 
+  - Note: Only get `CK Custom ini`. 
 
 ### Download SKSE
-- Get the one for Anniversary Edition https://skse.silverlock.org/ and add it to your `SkyrimFresh` folder. Extract it in there. 
+- Get the one for Anniversary Edition https://skse.silverlock.org/ and add it to your `SkyrimFresh` folder. Extract it in there, delete the .zip.
 - Open the contents of that new skse folder until you see `src`, `data`, etc. Inside the `Data` folder, you will find a `Scripts` folder with more contents. Right-click `Scripts` and zip it. Name it ``SKSEScripts.zip`` and move that to your ``SkyrimFresh`` folder.
 
 ### Install MO2
@@ -49,13 +57,17 @@ All guides here have been moved to: https://github.com/The-Animonculory/Modding-
 - Press `Next`, finish that install.
 - Go to `Tools > Settings > Theme` in MO2.
 - Change theme to 1809 Dark Mode. Because *eyes*. Press OK.
+- Press `Edit...`
+  - ![image](https://user-images.githubusercontent.com/92814468/179651311-c7b7af5d-e077-4cf9-996d-31ad7fd6569d.png)
+  - Go to where Creation Kit is.
+  - Check the box for `Overwrite Steam AppID` and add `1946180` in the field.
+
 
 ### SkyrimFresh Folder
 - Drag `CKScripts.zip` and `SKSEScripts.zip` into the Downloads tab in MO2, and install both. Place these after the DLCs and Creation Club content, and before any mods you make. `CKScripts` go before `SKSEScripts`.
 - Open the skse folder. Copy the skse dll, skse loader.exe, skse steam loader.dll into the `Stock Game` folder.
 - Open the `CK64Fixes Release` folder. Copy all contents and paste into the `Stock Game` folder.
 - Open the `SSE Creation Kit Fixes Update` folder. Copy all contents and paste into the `Stock Game` folder. Replace the files.
-- Create a new folder in `Stock Game/Data` named `Sound`. Inside it, create a new folder named `Voice`. Open the `FonixData` folder in `SkyrimFresh` and drag `Processing` into `Voice`.
 - Open `FaceFXWrapper`. Drag `Tools` into `Stock Game`.
 - Copy `CreationKitCustom.ini` and paste into `Stock Game`.
 
@@ -70,21 +82,20 @@ All guides here have been moved to: https://github.com/The-Animonculory/Modding-
 - Refresh MO2, and voila.
 - ![image](https://user-images.githubusercontent.com/92814468/179336621-40eedb70-6671-4b3a-abef-241976c11e52.png)
 
+### Install via MO2
+- Download `FonixData File Mod Manager Install` https://www.nexusmods.com/skyrimspecialedition/mods/40971?tab=files
+- Download `Address Library` https://www.nexusmods.com/skyrimspecialedition/mods/32444?tab=files
+- Download `PapyrusUtil AE - Scripting Utility Functions` https://www.nexusmods.com/skyrimspecialedition/mods/13048?tab=description
+- Download `Engine Fixes` https://www.nexusmods.com/skyrimspecialedition/mods/17230?tab=files
+  - Part 1 via MO2.
+  - Part 2 goes into `Stock Game`. 
+- Download `Console Commands Extender` https://www.nexusmods.com/skyrimspecialedition/mods/28210
+- Download `ConsoleUtilSSE` https://www.nexusmods.com/skyrimspecialedition/mods/24858?tab=files
+- Download `More Informative Console` https://www.nexusmods.com/skyrimspecialedition/mods/19250?tab=files
 
-#### IF going to use Visual Studio Code, skip NotePad++. 
-### NotePad++
-- Get v7.4.2 of Notepad++ http://download.notepad-plus-plus.org/repository/7.x/7.4.2/ Disable auto-update. (Select Don't use AppData)
-- Install Papyrus++ https://www.nexusmods.com/skyrim/mods/64895/?tab=files
-- Open Notepad++
-- Copypaste Autocomplete  https://gist.githubusercontent.com/st4rdog/3470de541941d3e9b5b1/raw/02be3fa5e622535243b02e34cacdd7e79f2421e5/papyrus.xml into a new notepad file. Save as 'Papyrus.xml'  into Notepad++\plugins\APIs folder. 
-- ScriptCompile.bat, edit this in Skyrim directory > Papyrus Compiler. Save.
-``cd %2
-"%~dp0PapyrusCompiler" %1 -f="TESV_Papyrus_Flags.flg" -i="%~dp0..\Data\Scripts\Source" -o="%~dp0..\Data\Scripts"
-pause``
-- Press F5 (Run) in Notepad++. Paste this, but modify to your liking. WITH QUOTES. Press SAVE (shortcut can be CTRL F5), not Run. And then Cancel.
-``"D:\Games\steamapps\common\Skyrim Special Edition\Papyrus Compiler\ScriptCompile.bat" "$(FILE_NAME)" "$(CURRENT_DIRECTORY)"``
-- It's important that you add your mod's Source folder into Plugins > Papyrus++ > Settings > Import directories. 
 
+# Everything else below is 100% a WIP
+## Scripting for Mod Authoring
 ### Visual Studio Code (if not using NotePad++)
 - Download here: https://code.visualstudio.com/
 - You can choose a different directory to install it in.
@@ -126,8 +137,27 @@ pause``
 - If you are in-game and want to see debug logs, you will need to press that play button. An indication of a successful connection looks like this: ![Papyrus](https://cdn.discordapp.com/attachments/803257955029352518/931575185218367588/38573e2b0313caf79bceae9a624252cd.png). If you don't see your debug console, hit View > Debug Console.
 
 
-## Credits
-- I take no credit for what is written. I simply wanted to put together all the things I learned and wanted to share. :)
+
+## Scripting for Modlists
+Use this section if the modlist does not come with a scripting environment. Uses Notepad++.
+- Add Papyrus Compiler folder
+
+
+#### IF going to use Visual Studio Code, skip NotePad++. 
+### NotePad++
+- Get v7.4.2 of Notepad++ http://download.notepad-plus-plus.org/repository/7.x/7.4.2/ Disable auto-update. (Select Don't use AppData)
+- Install Papyrus++ https://www.nexusmods.com/skyrim/mods/64895/?tab=files
+- Open Notepad++
+- Copypaste Autocomplete  https://gist.githubusercontent.com/st4rdog/3470de541941d3e9b5b1/raw/02be3fa5e622535243b02e34cacdd7e79f2421e5/papyrus.xml into a new notepad file. Save as 'Papyrus.xml'  into Notepad++\plugins\APIs folder. 
+- ScriptCompile.bat, edit this in Skyrim directory > Papyrus Compiler. Save.
+``cd %2
+"%~dp0PapyrusCompiler" %1 -f="TESV_Papyrus_Flags.flg" -i="%~dp0..\Data\Scripts\Source" -o="%~dp0..\Data\Scripts"
+pause``
+- Press F5 (Run) in Notepad++. Paste this, but modify to your liking. WITH QUOTES. Press SAVE (shortcut can be CTRL F5), not Run. And then Cancel.
+``"D:\Games\steamapps\common\Skyrim Special Edition\Papyrus Compiler\ScriptCompile.bat" "$(FILE_NAME)" "$(CURRENT_DIRECTORY)"``
+- It's important that you add your mod's Source folder into Plugins > Papyrus++ > Settings > Import directories. 
+
+
 
 
 ### Needs to be updated, ignore for now
@@ -135,4 +165,47 @@ pause``
  ``bEnableLogging = 1, bEnableTrace = 1, bLoadDebugInformation = 1`` and hit Save.
 - In MO2's Executables settings, for Creation Kit, you will need to make sure that your mod is selected in *Create files in mod instead of overwrite.*
 SKSE
+
+
+
+## Change Headparts (No FaceGen)
+### Before you proceed
+This guide is meant for existing actors that already have a FaceGen. It's also mostly for me so I can easily remember the next time I do this. :P
+
+### Hair
+- Let's use KS Hairs as an example. 
+- Open up the KSHairdos.esp in Creation Kit just to see what hairline the hair you want used.
+- Check the box for `Show only active (*) forms`. In the Filter field, look up the hair.
+- Check the Extra Parts section to see if you need to change the scalp.
+- Close Creation Kit.
+- Copy the new hair files. 
+  - KS Hairs folder > meshes > KS Hairdo's > Synthesis.nif, Synthesis.tri, SynthesisHl.nif.
+  - KS Hairs folder > textures > KS Hairdo's > Synthesis.dds, Synthesis_n.dds
+- Paste them into your mod's folder.
+  - Follower folder > meshes > actors > character > Follower > hair
+  - Follower folder > textures > actors > character > Follower > hair
+- Open Creation Kit. Load your follower.esp.
+- Go to the hair headpart. 
+- Replace the .nif and .tri associated with that hair.
+- Do the same for the hairline.
+- Go to the TextureSet section.
+- Change the .dds files associated with the hair (remember to include the `_n.dds` file also).
+- Save your file and close the Creation Kit.
+- Go to follower.esp > meshes > actors > character > FaceGenData > FaceGeom > follower.esp > XXXXXXX.NIF (Open NifSkope).
+- Also open Synthesis.nif (whatever hair you chose) using NifSkope.
+- Copy the BSDynamicTriShape in Synthesis.nif.
+- Paste that into the FaceGen NIF's NiNode named BSFaceGenNiNodeSkinned.
+- Paste again so there's two.
+- Name one of them as the hair. The other is a hairline.
+- Delete your original hair and hairlines trishapes. Make sure to use `Remove Branch`.
+- For the hair: Click on BSDynamicTriShape > BSLightingShaderProperty > BSShaderTextureSet
+  - Change the texture paths so they say `textures\actors\character\follower\hair\synthesis.dds` and `...synthesis_n.dds`.
+  - Do this for the hairline as well.
+- For the hair, click NiAlphaProperty and make sure the Flags say 4845. And the threshold should be 40.
+- For the hairline, click on NiAlphaProperty also and now the Flags should say 4844. Threshold is 128.
+
+Check vanilla facegens and hairs if helmet issue arises.
+
+
+
 
