@@ -20,6 +20,7 @@
 - Download FaceFXwrapper https://www.nexusmods.com/skyrimspecialedition/mods/20061.
 - Open the `FaceFXWrapper` folder. Drag `Tools` into `Game Root`.
 - If Creation Kit's render window is flickering for you, downgrade your NVIDIA card to 512.77.
+- Open Command Prompt in Administrator Mode. Enter this: `%windir%\System32\regsvr32.exe "D:\ADT\Game Root\flowchartx64.dll"`
 
 ## Scripting for Mod Authoring
 ### Visual Studio Code
