@@ -59,7 +59,7 @@
 - To change which workspace you are in, press `CTRL+SHIFT+E` and if you look below, there's a *WORKSPACES* tab. You can move this tab to the top.
 
 ## Visual Studio Code Notes
-- How to compile: Run > Build Task.
+- How to compile: Terminal > Build Task.
 - When you want to pack your bsa (I have not done this yet), you WILL need to return to your mod's skyrimse.ppj to change some values. Thanks to mrowrpurr, they're pretty straightforward:" CHANGE THE MOD NAME HERE".
 
 ### Debugging for VS Code - WIP
