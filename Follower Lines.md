@@ -41,7 +41,7 @@ FollowerBleedoutVar.SetValue(1 as Float)
 - ![img](https://imgur.com/ACtvVAa.png)
 - Here's what Phase 2 has on **Start**:
 - ![img](https://imgur.com/VlfEXCP.png)
-- For **Completion**, this is the code to add in the Papyrus Fragment box: ```AK69KatanaHealBleedoutVar.SetValue(0 as Float)```
+- For **Completion**, this is the code to add in the Papyrus Fragment box: ```BleedoutVar.SetValue(0 as Float)```
 - Don't forget to define your properties, basically every time you have scripts.
 - Here's what your scene page should look like:
 - ![img](https://imgur.com/5wr2pL3.png)
