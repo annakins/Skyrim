@@ -190,5 +190,5 @@ Select everything in the folder EXCEPT gpu.txt and copy it into the folder you j
 
 
 ## Credits
-- [Stock Game Info and ADT - The Animonculory](](https://github.com/The-Animonculory/))
+- [Stock Game Info and ADT - The Animonculory](https://github.com/The-Animonculory/)
 - [Mrowrpurr](https://github.com/mrowrpurr)
