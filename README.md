@@ -1,5 +1,5 @@
 # Links
-- [Making a Follower + Organized Template](https://docs.google.com/spreadsheets/d/1KZTleSNoXBbG_hJiitFTNiskn_qVNySgcZfP7YsGwmw/edit?usp=sharing)
+- [Follower Dialogue Manager Template](https://docs.google.com/spreadsheets/d/1KZTleSNoXBbG_hJiitFTNiskn_qVNySgcZfP7YsGwmw/edit?usp=sharing)
 - [ENB Guide](https://github.com/The-Animonculory/Modding-Resources/blob/main/ENB%20Tips.md)
 ## Mod Authoring
 - If you are looking to have a clean mod authoring environment for Skyrim, you've come to the right place. 
