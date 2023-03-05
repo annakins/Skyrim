@@ -1,10 +1,10 @@
 # Mod Authoring
+- Are you here because you'd like to make a follower, and/or you're looking to have more organization with your dialogue? [Click here](https://docs.google.com/spreadsheets/d/1KZTleSNoXBbG_hJiitFTNiskn_qVNySgcZfP7YsGwmw/edit?usp=sharing). Otherwise, please continue! 
 ## Prefer to watch?
 - VIDEO TO BE PLACED HERE
 
 
 ## Prefer to read?
-
 
 - Install [Animonculory Dev Tools](https://github.com/The-Animonculory/ADT/blob/main/README.md), which has pre-installation requirements.
 - Please read the instructions completely, in that link. 
