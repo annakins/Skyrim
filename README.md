@@ -1,50 +1,62 @@
 # Mod Authoring
+## Prefer to watch?
+- VIDEO TO BE PLACED HERE
+
+
+## Prefer to read?
+
+
 - Install [Animonculory Dev Tools](https://github.com/The-Animonculory/ADT/blob/main/README.md), which has pre-installation requirements.
 - Please read the instructions completely, in that link. 
 - If you are encountering issues (ex: installation failed), please join the [Animonculory Discord](https://discord.gg/DffHKcszfg).
 - When the installation is complete, let's proceed below.
 
-## Instructions
-- Now, follow the steps in this guide: https://github.com/The-Animonculory/Modding-Resources/blob/main/Stock%20Game%20Setup.md
-- You should have the Game Root folder in your ADT folder (14 items copied over: Creations, Data, Skyrim, bink2w64.dll, etc.).
-- If you have Creation Club content, scroll down in that [Stock Game guide](https://github.com/The-Animonculory/Modding-Resources/blob/main/Stock%20Game%20Setup.md). Because there is also a clean method to include te content in your modlist.
-- Download SKSE. Get the one for Anniversary Edition https://skse.silverlock.org/ and add to a folder you create (NOT in your ADT folder), perhaps call it `SkyrimFresh`. Extract it in there. 
+
+### Making the Game Root and Copying across the files
+
+- Make a folder inside of your ADT folder, called **Game Root**.
+- Open that folder and then open a new explorer window.
+- Navigate to where your original Skyrim is installed. It is typically nested similar to `\steam\steamapps\common\Skyrim Special Edition`.
+Select everything in the folder EXCEPT gpu.txt and copy it into the folder you just created. **DO NOT MOVE IT.**
+![img](https://raw.githubusercontent.com/The-Animonculory/Modding-Resources/main/Images/Stock%20Game/CopyThis.webp)
+- If you have Creation Club content, check this: [Stock Game guide - Cleaning up the CC content](https://github.com/The-Animonculory/Modding-Resources/blob/main/Stock%20Game%20Setup.md#cleaning-up-the-cc-content).
+- Download **SKSE**. Get the one for whichever Skyrim version you have https://skse.silverlock.org/ and add to a folder you create (NOT in your ADT folder), perhaps call it **SkyrimFresh**. Extract it in there. 
 - Drag the `skse dll, skse loader.exe` into the Game Root folder.
-- Download Skyrim Special Edition: Creation Kit on Steam. 
+- Download **Skyrim Special Edition: Creation Kit** on Steam. 
 - Open Creation Kit. Say NO to unpacking Scripts. Exit Creation Kit. 
-- Run the UCKP Patcher tool in your `ADT > Tools > Creation Kit Patches` folder. Don't change anything, and just Extract.
+- Run the **UCKP Patcher** tool in your `ADT > Tools > Creation Kit Patches` folder. Don't change anything, and just Extract.
 - Copy everything in the Creation Kit Patches folder and paste the contents into your new `ADT > Game Root` folder.
-- Go to your Skyrim directory/Data: `X:\Games\steamapps\common\Skyrim Special Edition\Data`. Copy that `Scripts.zip` file. 
-- Go to a folder like My Documents or your Desktop, and create a new folder like `SkyrimFresh`. Paste and unpack `Scripts.zip` there. 
-- Delete `Scripts.zip` in that `SkyrimFresh` folder.
-- You'll now see `DialogueViews` and `Source`.
-- Rename ``Source`` to ``Scripts``. Open that folder. Rename ``Scripts`` to ``Source``. So it has to be `Scripts > Source`. NOT Source > Scripts.
-- Go back to where you see `DialogueViews` and `Scripts`.
-- Add both `DialogueViews` and `Scripts` into a .zip file. You can name it ``CKScripts.zip`` (or 7z). You can delete both the `DialogueViews` and `Scripts` folders after successfully placing them into a .zip file.
-- Open Mod Organizer in your ADT folder.
-- Drag the `CKScripts` folder into your MO2 window, and place it before SKSE on the lefthand pane. **Enable it.**
-- Create a separator and name it whatever you'd like. This is where you can place your created/edited mods. Order-wise, it should be fine to place it under the `Plugin Dev Libraries` separator.
+- Go to your Skyrim directory/Data: `steam\steamapps\common\Skyrim Special Edition\Data`. Copy that **Scripts.zip** file. 
+- Go to your **SkyrimFresh** folder. Paste and unpack **Scripts.zip** there. 
+- Delete **Scripts.zip** in that **SkyrimFresh** folder.
+- In the unpacked Scripts folder, you'll now see **DialogueViews** and **Source**.
+- Rename ``Source`` to ``Scripts``. Open that folder. Rename ``Scripts`` to ``Source``. So it has to be `Scripts > Source`. *NOT Source > Scripts*.
+- Go back to where you see **DialogueViews** and **Scripts**.
+- Add both **DialogueViews** and **Scripts** into a .zip file. You can name it ``CKScripts.zip`` (or 7z). You can delete both the **DialogueViews** and **Scripts** folders after successfully placing them into a .zip file.
+- Open Mod Organizer (MO2) in your ADT folder.
+- Drag **CKScripts.zip** into your MO2 window, and place it before SKSE on the lefthand pane. **Enable it.**
+- Create a separator and name it whatever you'd like. This is where you can place your created/edited mods. Order-wise, it should be fine to place it under the *Plugin Dev Libraries* separator.
 - ![img](https://imgur.com/DJD2Bu1.png)
 - ![img](https://imgur.com/Ufe8Uqq.png)
-- In Mod Organizer, click on SKSE and press Edit.
+- In Mod Organizer, click on SKSE and press `<Edit...>`
 - ![img](https://imgur.com/ceG5cO7.png)
 - Scroll until you see Creation Kit.
 - ![img](https://imgur.com/s619kip.png)
-- In the `Binary` field, you'll want to select CreationKit.exe in your Game Root folder:
+- In the** Binary** field, you'll want to select CreationKit.exe in your Game Root folder:
 `ADT > Game Root > CreationKit.exe`
-- In the `Start In` field, it should say: `ADT > Game Root`. 
-- In the `Overwrite Steam AppID` field, enter `1946180`.
+- In the **Start In** field, it should say: `ADT > Game Root`. 
+- In the **Overwrite Steam AppID** field, enter `1946180`.
 - ![img](https://imgur.com/Vou1sVI.png)
 - Now scroll up back to see SKSE on the list. 
 - ![img](https://imgur.com/TFmorzN.png)
-- You will also need to switch the `Binary` and `Start In` fields.
+- You will also need to switch the **Binary** and **Start In** fields, as shown above.
 - Press OK.
-- Look for the `SSE Engine Fixes (PreLoader)` folder (it came with ADT), go into Root, and then copy all 3 files. Paste that into your Game Root folder.
-- Now, go into Mod Organizer's settings. Change the Managed Game to lead to  `Game Root > SkyrimSE.exe`.
+- Look for the **SSE Engine Fixes (PreLoader)** folder (it came with ADT, in `ADT > mods`), go into **Root**, and then copy all 3 files. Paste that into your Game Root folder.
+- Now, go into Mod Organizer's settings. Change the **Managed Game** to lead to  `Game Root > SkyrimSE.exe`.
 - ![img](https://imgur.com/OVQOGNh.png)
-- Again, in your ORIGINAL Skyrim directory, copy the Papyrus Compiler folder.
+- Again, in your ORIGINAL Skyrim directory, copy the **Papyrus Compiler** folder.
 - Paste it into your new Game Root folder.
-- In the newly copied Papyrus Compiler folder, edit `ScriptCompile.bat` (right-click > Edit)
+- In the newly copied Papyrus Compiler folder, edit **ScriptCompile.bat** (right-click > Edit)
 - Replace what's in there with: `cd %2 "%~dp0PapyrusCompiler" %1 -f="TESV_Papyrus_Flags.flg" -i="%~dp0..\Data\Scripts\Source" -o="%~dp0..\Data\Scripts" pause`. Save.
 
 ## Scripting for Mod Authoring
@@ -53,7 +65,7 @@
 - You can choose a different directory to install it in.
 - Setup: Check all boxes under *Other*.
 - Open VS Code. Go to File > Preferences > Extensions `CTRL+SHIFT+X`.
-- Look up `Papyrus` by Joel Day. Install.
+- Look up `Papyrus` by Joel Day. Install. **Switch to the pre-release version**.
 - Look up `Workspace Explorer` by Tom Saunders. Install.
 - Now, go to File > Preferences > Settings `CTRL+,`.
 - Look up `papyrus skyrim`. Scroll down to Special Edition's *Mod Directory Path*. Add your `ADT > mods` path to the field. Do the same for the Install Path, but go to Game Root.
@@ -167,12 +179,16 @@
 - How to compile: `Terminal > Build Task`.
 - When you want to pack your bsa (I have not done this yet, and I do not think I will), you WILL need to return to your mod's skyrimse.ppj to change some values. Thanks to mrowrpurr, they're pretty straightforward:" CHANGE THE MOD NAME HERE".
 
-### Debugging for VS Code - WIP
+### Debugging in VS Code
 - Go to `MO2 > INI Editor`. In skyrim.ini, look for *papyrus*. Change the settings to reflect the following:
  ``bEnableLogging = 1, bEnableTrace = 1, bLoadDebugInformation = 1`` and hit Save.
 - Set up your debugging: when you have one of your mod's scripts open, click on ![Papyrus](https://cdn.discordapp.com/attachments/803257955029352518/931574029217828884/6b41099efb62089166a1ca330feea893.png). And then the play button ![Papyrus](https://cdn.discordapp.com/attachments/803257955029352518/931574329651654757/5abfe5c1dd4544dad433ba9ce44157cb.png). Select `Install SKSE Plugin`. Go to MO2, refresh, and enable `Papyrus Debug Extension`.
 - When you test things in-game, it's SKSE you need to choose. 
-- If you are in-game and want to see debug logs, you will need to press that play button. An indication of a successful connection looks like this: ![Papyrus](https://cdn.discordapp.com/attachments/803257955029352518/931575185218367588/38573e2b0313caf79bceae9a624252cd.png). 
+- If you are in-game and want to see debug logs, you will need to press that play button. 
+- An indication of a successful connection looks like this: ![Papyrus](https://cdn.discordapp.com/attachments/803257955029352518/931575185218367588/38573e2b0313caf79bceae9a624252cd.png). 
 - If you don't see your real-time logs, hit `View > Debug Console`.
 
 
+## Credits
+- [Stock Game Info and ADT - The Animonculory](](https://github.com/The-Animonculory/))
+- [Mrowrpurr](https://github.com/mrowrpurr)
