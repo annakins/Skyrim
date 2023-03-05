@@ -7,6 +7,8 @@ This page is part of the [Skyrim Follower Dialogue Template](https://docs.google
 - [Horse Riding](https://github.com/annakins/Skyrim/blob/main/Follower%20Lines.md#horse-riding)
 - [Non-hostile Spell Reactions](https://github.com/annakins/Skyrim/blob/main/Follower%20Lines.md#non-hostile-spell-reactions)
 
+## A Quick Note
+- You are free to edit the scripts below and personalize them. If your author name is Jane Jones and you love the number 13, then a good prefix would be `JJ13` for all your mods. Doing this just makes things easier for you to find.
 
 ## Dissection of Conditions
 ![img](https://imgur.com/xvPOoyw.png)
@@ -64,14 +66,14 @@ endEvent
 
 ## Player Death Reactions
 - Create a new quest. Name it prefix + `PlayerDeathQuest`.
-- This is what I have, but your conditions will be different. What I have here, it's just checking for if the followers I've made are recruited.
+- This is what I have, but your conditions will be different. Here, the quest is just checking if my followers are currently in my party.
 - ![img](https://imgur.com/ChxYpcM.png)
 - Let's make a scene in your **FollowQuest**.
 - Since we covered scenes briefly in the *Bleedout* example, I'll simply show what the player death reaction scene would look like:
 - ![img](https://imgur.com/JWOIaQS.png)
 - There's nothing to add in the Papyrus fragments, so let's proceed.
 - Let's go back to your ***PlayerDeathQuest***.
-- Go into the Alias tab, and add one for the player.
+- Go into the Alias tab, and add an alias and script for the player.
 - ![img](https://imgur.com/clo8Mx0.png)
 - Here's the script:
 ```
@@ -95,15 +97,16 @@ endFunction
     - FollowerRide package
     - HorseFollow package
     - HorseStay package
-- Create a global variable for your riding, like: *prefix + ridingvar*. - Variable type is short, with a value of 0. You'll find that most global variables will be this way.
+- Create a global variable for your riding, like: *prefix + ridingvar*
+- Variable type is short, with a value of 0. You'll find that most global variables will be this way.
 - I will show you what I have, but you will see that there are extra variables that are specific to my follower. The globally important conditions are the Recruited variable, and the Riding variable.
-- ![img](https://imgur.com/wDH21xR.png)
+![img](https://imgur.com/wDH21xR.png)
 * * *
-- ![img](https://imgur.com/BLNc1zu.png)
+![img](https://imgur.com/BLNc1zu.png)
 * * *
-- ![img](https://imgur.com/q1tI65w.png)
+![img](https://imgur.com/q1tI65w.png)
 * * *
-- ![img](https://imgur.com/3ygjEeq.png)
+![img](https://imgur.com/3ygjEeq.png)
 - Let's go to your **FollowQuest**.
 - Select your follower's alias.
 - Add both the FollowerNoMount and FollowerRide packages in there. **NOTE: The order matters.**

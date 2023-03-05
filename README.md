@@ -1,10 +1,19 @@
-# Mod Authoring
-- Are you here because you'd like to make a follower, and/or you're looking to have more organization with your dialogue? [Click here](https://docs.google.com/spreadsheets/d/1KZTleSNoXBbG_hJiitFTNiskn_qVNySgcZfP7YsGwmw/edit?usp=sharing). Otherwise, please continue! 
-## Prefer to watch?
+# Links
+- [Making a Follower + Organized Template](https://docs.google.com/spreadsheets/d/1KZTleSNoXBbG_hJiitFTNiskn_qVNySgcZfP7YsGwmw/edit?usp=sharing)
+- [ENB Guide](https://github.com/The-Animonculory/Modding-Resources/blob/main/ENB%20Tips.md)
+## Mod Authoring
+- If you are looking to have a clean mod authoring environment for Skyrim, you've come to the right place. 
+- Mod Authoring Environment: Think of it as a workspace/workshop. 
+
+### What does it look like?
+- You'll have a mod manager where you can focus on development (Mod Organizer), a folder where you'll have Skyrim installed (separate from your original directory), a scripting tool to make coding a more pleasant experience, and other tools that I won't be covering in this tutorial, which are [listed on the ADT page](https://github.com/The-Animonculory/ADT-NG/blob/main/README.md#what-tools-does-adt-come-with).
+- Without further ado, let's get going.
+
+### Prefer to watch?
 - VIDEO TO BE PLACED HERE
 
 
-## Prefer to read?
+### Prefer to read?
 
 - Install [Animonculory Dev Tools](https://github.com/The-Animonculory/ADT/blob/main/README.md), which has pre-installation requirements.
 - Please read the instructions completely, in that link. 
