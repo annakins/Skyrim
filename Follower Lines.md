@@ -98,8 +98,11 @@ endFunction
 - Create a global variable for your riding, like: *prefix + ridingvar*. - Variable type is short, with a value of 0. You'll find that most global variables will be this way.
 - I will show you what I have, but you will see that there are extra variables that are specific to my follower. The globally important conditions are the Recruited variable, and the Riding variable.
 - ![img](https://imgur.com/wDH21xR.png)
+* * *
 - ![img](https://imgur.com/BLNc1zu.png)
+* * *
 - ![img](https://imgur.com/q1tI65w.png)
+* * *
 - ![img](https://imgur.com/3ygjEeq.png)
 - Let's go to your **FollowQuest**.
 - Select your follower's alias.
