@@ -42,7 +42,7 @@ Select everything in the folder EXCEPT gpu.txt and copy it into the folder you j
 - ![img](https://imgur.com/ceG5cO7.png)
 - Scroll until you see Creation Kit.
 - ![img](https://imgur.com/s619kip.png)
-- In the** Binary** field, you'll want to select CreationKit.exe in your Game Root folder:
+- In the **Binary** field, you'll want to select **CreationKit.exe** in your Game Root folder:
 `ADT > Game Root > CreationKit.exe`
 - In the **Start In** field, it should say: `ADT > Game Root`. 
 - In the **Overwrite Steam AppID** field, enter `1946180`.
