@@ -1,4 +1,4 @@
-This page is part of the [Skyrim Follower Dialogue Template](https://docs.google.com/spreadsheets/d/1KZTleSNoXBbG_hJiitFTNiskn_qVNySgcZfP7YsGwmw/edit?usp=sharing).
+This page is part of the [Skyrim Follower Dialogue Template](https://ko-fi.com/s/f19c1d59ac).
 
 # Table of Contents
 - [Dissection of Conditions](https://github.com/annakins/Skyrim/blob/main/Follower%20Lines.md#dissection-of-conditions)
