@@ -6,7 +6,7 @@ This page is part of the [Skyrim Follower Dialogue Template](https://ko-fi.com/s
 - [Player Death Reactions](https://github.com/annakins/Skyrim/blob/main/Follower%20Lines.md#player-death-reactions)
 - [Horse Riding](https://github.com/annakins/Skyrim/blob/main/Follower%20Lines.md#horse-riding)
 - [Non-hostile Spell Reactions](https://github.com/annakins/Skyrim/blob/main/Follower%20Lines.md#non-hostile-spell-reactions)
-
+- [A really awesome resource](https://deck16.net/post/22645519500/making-a-unique-voiced-follower-in-skyrim-part-1)
 ## A Quick Note
 - You are free to edit the scripts below and personalize them. If your author name is Jane Jones and you love the number 13, then a good prefix would be `JJ13` for all your mods. Doing this just makes things easier for you to find.
 
@@ -21,6 +21,7 @@ This page is part of the [Skyrim Follower Dialogue Template](https://ko-fi.com/s
     - The line won't pop up again until after 24 game hours, and even then, the chances are fairly low due to the conditions set (unless you have a habit of being in the same place, with 5 or more ale on your person)
 
 ## Bleedout Lines
+- Bleedout works if your character is not *Essential*. There are ways to go around that, but they are not covered here.
 - Make a bleedout variable.
 - ![img](https://imgur.com/1GyiUAY.png)
 - Go into your follower's FollowQuest.
@@ -181,3 +182,17 @@ endFunction
 - Go to Player Dialogue.
 - You'll see there are branches like *WICastMagicNonHostileSpellHealing*. And there's dialogue already existing for Skyrim NPCs. You can add your follower's dialogue here, but just make sure that you properly define who's speaking.
 - ![img](https://imgur.com/lZnVtNB.png)
+- **You can do the above method, or you can create a scene, just like how we did the bleedout lines!** But let's not stop here just yet.
+- Here's the thing. If you check the Magic Effect tab for *RestoreHealthFFSelfArea*, you will see that the *SayOnHitByMagicEffectScript* does not have a value for *CombatTopicToSay*. This means that **while you're in combat**, and you're trying to heal your follower, they won't react to your epic heals if you used the default **WICastMagicNonHostileSpell01** quest.
+- ![img](https://imgur.com/EKCnEW6.png)
+- You don't want to overwrite that Magic Effect, though, as that would mean you're editing a vanilla record. **You want to try to avoid that in certain cases**. 
+- Now, we want to make it so our follower reacts to heals in combat, too. [Arcane University](https://wiki.beyondskyrim.org/wiki/Arcane_University:World_Interactions) covers how to do this very well. Scroll to *Spell Reactions*.
+- Here is what we are going to do instead: Go to your *FollowQuest*, and then go to the *Combat* tab. And then select Hit.
+- ![img](https://imgur.com/uNIjE4r.png)
+- Add a new line: `Thank you.` You are welcome to record this any time.
+- If you check a Magic Effect that's for a healing spell, you'll see the keyword, `MagicRestoreHealth`.
+- ![img](https://imgur.com/TGf5mX2.png)
+- Now, add that to your new `Thank you.` line!
+- ![img](https://imgur.com/ezSPvo6.png)
+- Now you have a combat and non-combat set of spell reactions.
+- Personalize as much as you'd like. Have fun!

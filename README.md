@@ -10,8 +10,8 @@
 - Without further ado, let's get going.
 
 ### Prefer to watch?
-- VIDEO TO BE PLACED HERE
-
+[![IMAGE ALT TEXT](https://i9.ytimg.com/vi_webp/oBM2X4Ts81Y/mqdefault.webp?v=640bcf40&sqp=CMCur6AG&rs=AOn4CLDFWjFTSIq78-F17cWNliV6Q2fZCg)](http://www.youtube.com/watch?v=oBM2X4Ts81Y "Mod Authoring in Skyrim")
+- **Click on the thumbnail to watch on YouTube.**
 
 ### Prefer to read?
 
@@ -25,19 +25,19 @@
 
 - Make a folder inside of your ADT folder, called **Game Root**.
 - Open that folder and then open a new explorer window.
-- Navigate to where your original Skyrim is installed. It is typically nested similar to `\steam\steamapps\common\Skyrim Special Edition`.
+- Navigate to where your original Skyrim is installed (wherever you installed it from following the ADT instructions): `\steam\steamapps\common\Skyrim Special Edition`.
 Select everything in the folder EXCEPT gpu.txt and copy it into the folder you just created. **DO NOT MOVE IT.**
 ![img](https://raw.githubusercontent.com/The-Animonculory/Modding-Resources/main/Images/Stock%20Game/CopyThis.webp)
 - If you have Creation Club content, check this: [Stock Game guide - Cleaning up the CC content](https://github.com/The-Animonculory/Modding-Resources/blob/main/Stock%20Game%20Setup.md#cleaning-up-the-cc-content).
-- Download **SKSE**. Get the one for whichever Skyrim version you have https://skse.silverlock.org/ and add to a folder you create (NOT in your ADT folder), perhaps call it **SkyrimFresh**. Extract it in there. 
-- Drag the `skse dll, skse loader.exe` into the Game Root folder.
+- Now, go into your mods folder (`ADT > mods`) and look for **Skyrim Script Extender (SKSE64)**. 
+- Go into the Root folder in there, and copy and paste `skse dll, skse loader.exe` into the Game Root folder.
 - Download **Skyrim Special Edition: Creation Kit** on Steam. 
 - Open Creation Kit. Say NO to unpacking Scripts. Exit Creation Kit. 
 - Run the **UCKP Patcher** tool in your `ADT > Tools > Creation Kit Patches` folder. Don't change anything, and just Extract.
 - Copy everything in the Creation Kit Patches folder and paste the contents into your new `ADT > Game Root` folder.
-- Go to your Skyrim directory/Data: `steam\steamapps\common\Skyrim Special Edition\Data`. Copy that **Scripts.zip** file. 
-- Go to your **SkyrimFresh** folder. Paste and unpack **Scripts.zip** there. 
-- Delete **Scripts.zip** in that **SkyrimFresh** folder.
+- Go to your Skyrim directory > Data: `steam\steamapps\common\Skyrim Special Edition\Data`. Copy that **Scripts.zip** file. 
+- Temporarily use the desktop and paste and unpack **Scripts.zip** there. 
+- Delete **Scripts.zip** since it's been unpacked.
 - In the unpacked Scripts folder, you'll now see **DialogueViews** and **Source**.
 - Rename ``Source`` to ``Scripts``. Open that folder. Rename ``Scripts`` to ``Source``. So it has to be `Scripts > Source`. *NOT Source > Scripts*.
 - Go back to where you see **DialogueViews** and **Scripts**.
@@ -85,14 +85,14 @@ Select everything in the folder EXCEPT gpu.txt and copy it into the folder you j
 - Remove `CreationKitCustom.ini` and add `CreationKitPrefs.ini`.
 - ![img](https://imgur.com/puZJfgt.png)
 - Close VS Code. We have to replace template files.
-- Go to ``C:\Users\USERNAME\.vscode\extensions``. 
+- Go to ``C:\Users\USERNAME\.vscode\extensions\joelday.papyrus-lang-vscode-VERSIONNUMBER\resources\sse``. 
 
 <!-- HOLD ON 
 - Install the latest Pyro release. https://github.com/fireundubh/pyro/releases Not the Source code.
 - Back to that .vscode\extensions folder, open `joelday.papyrus-lang-vscode-VERSIONNUMBER` Open the *pyro* folder. Delete everything in there. Open the latest pyro release you just downloaded. Copy everything and paste them into your pyro folder.
 -->
 
-- Now, go into ``C:\Users\Anna\.vscode\extensions\joelday.papyrus-lang-vscode-VERSIONNUMBER\resources\sse``.
+
 - Open `skyrimse.ppj` with VS Code. 
 - If you see a message in a blue bar that mentions Restricted Mode, click *Manage*. Scroll down to *Trusted Folders & Workspaces*. Click *Add Folder*. You can just add the drive where all of your Skyrim + modding files are saved. If they're all in D: Drive, for example, you select that. And then press *Trust*.
 - TIP: If your Visual Studio Code's text in the scripts don't have any color, that means your configurations mentioned here aren't set up correctly.
@@ -149,8 +149,9 @@ Select everything in the folder EXCEPT gpu.txt and copy it into the folder you j
     </PostBuildEvent>
 </PapyrusProject>
 ```
-- Paste that into your `skyrimse.ppj`, you will need to change the directory under: `` <!-- <Import>@ModsFolder\SKSE64\Scripts\Source</Import> -->`` and SAVE. Mine says:
- ``<Import>D:\ADT\mods\CKScripts\Scripts\Source</Import>
+- Paste that into your `skyrimse.ppj`, you will need to change the directory under: 
+- `` <!-- <Import>@ModsFolder\SKSE64\Scripts\Source</Import> -->`` with your Creation Kit and *SKSE Scripts > Source* directory and SAVE. Mine says:
+- ``<Import>D:\ADT\mods\CKScripts\Scripts\Source</Import>
  <Import>D:\ADT\mods\SKSE\Scripts\Source</Import>``
 - Now, open `tasks.json` in that same folder.
 - Delete all text again.
@@ -184,7 +185,7 @@ Select everything in the folder EXCEPT gpu.txt and copy it into the folder you j
   - ![img](https://imgur.com/MVj1sIk.png)
 - To change which workspace you are in, press `CTRL+SHIFT+E` and if you look below, there's a *WORKSPACES* tab. You can move this tab to the top.
 
-## Visual Studio Code Notes
+### Visual Studio Code Notes
 - How to compile: `Terminal > Build Task`.
 - When you want to pack your bsa (I have not done this yet, and I do not think I will), you WILL need to return to your mod's skyrimse.ppj to change some values. Thanks to mrowrpurr, they're pretty straightforward:" CHANGE THE MOD NAME HERE".
 
@@ -193,11 +194,11 @@ Select everything in the folder EXCEPT gpu.txt and copy it into the folder you j
  ``bEnableLogging = 1, bEnableTrace = 1, bLoadDebugInformation = 1`` and hit Save.
 - Set up your debugging: when you have one of your mod's scripts open, click on ![Papyrus](https://cdn.discordapp.com/attachments/803257955029352518/931574029217828884/6b41099efb62089166a1ca330feea893.png). And then the play button ![Papyrus](https://cdn.discordapp.com/attachments/803257955029352518/931574329651654757/5abfe5c1dd4544dad433ba9ce44157cb.png). Select `Install SKSE Plugin`. Go to MO2, refresh, and enable `Papyrus Debug Extension`.
 - When you test things in-game, it's SKSE you need to choose. 
-- If you are in-game and want to see debug logs, you will need to press that play button. 
 - An indication of a successful connection looks like this: ![Papyrus](https://cdn.discordapp.com/attachments/803257955029352518/931575185218367588/38573e2b0313caf79bceae9a624252cd.png). 
 - If you don't see your real-time logs, hit `View > Debug Console`.
 
-
+## Github Integration
+- Please watch this video by MrowrPurr! :) https://youtu.be/_zVLoAzyU1s
 ## Credits
 - [Stock Game Info and ADT - The Animonculory](https://github.com/The-Animonculory/)
 - [Mrowrpurr](https://github.com/mrowrpurr)
