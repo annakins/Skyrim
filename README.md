@@ -10,7 +10,7 @@
 - Without further ado, let's get going.
 
 ### Prefer to watch?
-[![IMAGE ALT TEXT](https://i9.ytimg.com/vi_webp/oBM2X4Ts81Y/mqdefault.webp?v=640bcf40&sqp=CMCur6AG&rs=AOn4CLDFWjFTSIq78-F17cWNliV6Q2fZCg)](http://www.youtube.com/watch?v=oBM2X4Ts81Y "Mod Authoring in Skyrim")
+[![img](https://imgur.com/6mieOIm.png)](http://www.youtube.com/watch?v=oBM2X4Ts81Y "Mod Authoring in Skyrim")
 - **Click on the thumbnail to watch on YouTube.**
 
 ### Prefer to read?
