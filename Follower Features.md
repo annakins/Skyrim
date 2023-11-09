@@ -6,7 +6,7 @@ This page is part of the [Skyrim Follower Dialogue Template](https://ko-fi.com/s
 - [Player Death Reactions](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#player-death-reactions)
 - [Horse Riding](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#horse-riding)
 - [Non-hostile Spell Reactions](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#non-hostile-spell-reactions)
-- [Trust System](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#trust-system--reactions-to-player-actions)
+- [Trust System + Reactions to Player Actions](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#trust-system--reactions-to-player-actions)
 - [Patchless integration](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#patchless-integration)
 - [A really awesome resource](https://deck16.net/post/22645519500/making-a-unique-voiced-follower-in-skyrim-part-1)
 ## A Quick Note
