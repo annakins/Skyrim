@@ -8,6 +8,7 @@ This page is part of the [Skyrim Follower Dialogue Template](https://ko-fi.com/s
 - [Non-hostile Spell Reactions](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#non-hostile-spell-reactions)
 - [Trust System + Reactions to Player Actions](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#trust-system--reactions-to-player-actions)
 - [Patchless integration](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#patchless-integration)
+- [List of idle animations for dialogue](https://www.youtube.com/watch?v=ws6EaXQMBgs)
 - [A really awesome resource](https://deck16.net/post/22645519500/making-a-unique-voiced-follower-in-skyrim-part-1)
 ## A Quick Note
 - You are free to edit the scripts below and personalize them. If your author name is Jane Jones and you love the number 13, then a good prefix would be `JJ13` for all your mods. Doing this just makes things easier for you to find.
