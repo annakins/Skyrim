@@ -232,9 +232,28 @@ EndEvent
 - Personalize as much as you'd like. Have fun!
 
 ## Trust System + Reactions to Player Actions
-- In your config quest's script, add:
-
+- Create a config quest.
+- In your follow quest's controller script, add: `ConfigQuest.Start()` under `SetFollower`, like so: 
 ```
+Quest Property ConfigQuest Auto
+
+Function SetFollower(ObjectReference FollowerRef)
+     actor FollowerActor = FollowerRef as Actor
+     FollowerActor.RemoveFromFaction(DismissedFollowerFaction)
+     If FollowerActor.GetRelationshipRank(PlayerREF) <3 && FollowerActor.GetRelationshipRank(PlayerREF) >= 0
+          FollowerActor.SetRelationshipRank(PlayerREF, 3)
+     EndIf
+     FollowerActor.SetPlayerTeammate()
+     FollowerAlias.ForceRefTo(FollowerActor)
+     FollowerActor.EvaluatePackage()
+     FollowerRecruited.SetValue(1)
+	 ConfigQuest.Start()
+EndFunction
+```
+- Add a script onto your config quest:
+```
+Scriptname ConfigScript extends Quest  
+
 ControllerScriptName property DataStorage auto
 GlobalVariable property PlayerReactionsVar auto
 ReferenceAlias Property RNPC auto
@@ -276,6 +295,9 @@ endFunction
 ```
 - To save space, I've only added these two stats. One to showcase increasing trust, and the other to decrease trust.
 - Refer to this document to see what other stats you can use: [QueryStat](https://ck.uesp.net/w/index.php?title=QueryStat_-_Game)
+- In the Quest Stages tab, add this:
+
+![img](https://imgur.com/ZjOdsO5.png)
 - In your follow quest's controller script (the one with functions like `Function SetFollower(ObjectReference FollowerRef)`, `Function FollowerWait()`), add:
 ```
 ;==============Relationship System==============
