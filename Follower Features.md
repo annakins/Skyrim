@@ -452,7 +452,21 @@ endFunction
 ![img](https://imgur.com/P2VGEsy.png)
 ![img](https://imgur.com/CO00dtK.png)
 - The global you have here should match your dev notes. You'll need to keep track of that somewhere. For Katana, she responds to acts of murder with the `PlayerReactionsVar` == 13. 
-- You should now be able to use the template provided in this document to allow reactions, trust increases, as well as decreases.
+- Examples of how you'd use the trust level in dialogue:
+
+![img](https://imgur.com/UBAlxV2.png)
+- This prevents the player from trading with the follower.
+
+![img](https://imgur.com/sg65gi4.png)
+- Now, note the difference in the `GetVMQuestVariable` condition.
+- You should now be able to use the template provided in this document to allow reactions, trust increases, as well as decreases. Your system will be different from what I have, so you may want to change a bunch of floats. Like these: 
+```
+float MinRating = -5.0
+float MaxRating = 10.0
+float __minorAssessment = 0.05
+float __moderateAssessment = 0.2
+float __majorAssessment = 0.5
+```
 ## Patchless integration
 - Create a mod handler quest. Start game enabled, run once boxes checked.
 - Make a new reference alias.
