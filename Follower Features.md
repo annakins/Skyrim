@@ -26,11 +26,11 @@ This page is part of the [Skyrim Follower Dialogue Template](https://ko-fi.com/s
     - The line won't pop up again until after 24 game hours, and even then, the chances are fairly low due to the conditions set (unless you have a habit of being in the same place, with 5 or more ale on your person)
 
 ## Bleedout Lines
-- By default, bleedout dialogue works if your character is not *essential*. If your character is set to essential, find a spot to add the following: `Actorname.AllowBleedoutDialogue(true)`. For me, I placed it in one of the first dialogue options when an actor is recruited (so, something that does not repeat).
+- By default, bleedout dialogue works if your character is not *essential*. If your character is set to *essential*, find a spot to add the following: `Actorname.AllowBleedoutDialogue(true)`. For me, I placed it in one of the first dialogue options when an actor is recruited (so, something that does not repeat).
 - Make a bleedout variable.
 
 ![img](https://imgur.com/1GyiUAY.png)
-- Go into your follower's FollowQuest.
+- Go into your follower's **FollowQuest**.
 - Add a new scene. Check the box for `Interruptible`.
 - Right-click and **Add Phase at End**.
 - Add your follower as an actor.
@@ -56,7 +56,7 @@ FollowerBleedoutVar.SetValue(1 as Float)
 ![img](https://imgur.com/S9TAZUX.png)
 - For **Completion**, this is the code to add in the Papyrus Fragment box: ```BleedoutVar.SetValue(0 as Float)```
 - Don't forget to define your properties, basically every time you have scripts.
-- Now, go to the Quest Aliases, and select your follower. 
+- Now, go to the *Quest Aliases*, and select your follower. 
 - Add a new script, name it with your prefix + `bleedoutlinesscript`, like so:
 
 ![img](https://imgur.com/TavkgZV.png)
@@ -124,13 +124,22 @@ endFunction
 
 
 ![img](https://imgur.com/3ygjEeq.png)
+- For the sake of this tutorial, let's make sure you have a horse. Duplicate one of the horses, like `EncHorseSaddledBrown`.
+- Of course, name it the way you want to.
+
+![img](https://imgur.com/YV5xuyG.png)
+- Check the boxes that make sense for you. This is what I have for Cappy. For *ActorBase*, I also have `EncHorseSaddledBrown` selected.
+- In the other tabs, like *Traits*, you can leave them as is. You can change what makes sense to your character's horse later, if you wish.
+- Make sure to drag your horse into the area of your choice, in the render window. *Just a friendly reminder (if you need it) that any accidental clicks can be saved, so make sure to do a clean-up on xEdit later.*
+
+![img](https://imgur.com/hZvWxOo.gif)
 - Let's go to your **FollowQuest**.
 - Select your follower's alias.
 - Add both the FollowerNoMount and FollowerRide packages in there. **NOTE: The order matters.**
 
 ![img](https://imgur.com/VJkZzWq.png)
 - Do the same with your horse. The Stay package should be above the Follow package.
-- Now, select the player in the Quest Alias tab.
+- Now, select the player in the *Quest Alias* tab.
 - Add a mount script with your prefix.
 
 ![img](https://imgur.com/Ukp4Pmk.png)
@@ -191,6 +200,7 @@ function OnAnimationEvent(objectreference akSource, String asEventName)
 		EndIf	
 endFunction
 ```
+- When the player mounts, so does the follower - and if the horse is not near you, they get moved to where you are.
 - Define your properties after!
 
 ## Non-hostile Spell Reactions
@@ -207,7 +217,7 @@ Event OnEffectStart(Actor akTarget, Actor akCaster)
 GetHealedScene.Start()
 EndEvent
 ```
-- In your follower quest, add a scene.
+- In your **FollowQuest**, add a scene.
 - Have fun and get creative with when you'd like your follower to say certain things, with conditions.
 
 ![img](https://imgur.com/F08nzvY.png)
@@ -219,7 +229,7 @@ EndEvent
 ![img](https://imgur.com/EnFb1hn.png)
 - Make sure to add it to your actor's list of spells.
 - Now, we want to make it so our follower reacts to heals in combat, too. 
-- Go to your *FollowQuest*, and then go to the *Combat* tab. And then select Hit.
+- Go to your **FollowQuest**, and then go to the *Combat* tab. And then select Hit.
 
 ![img](https://imgur.com/uNIjE4r.png)
 - Add a new line: `Thank you.` Or whatever you want.
@@ -234,7 +244,7 @@ EndEvent
 
 ## Trust System + Reactions to Player Actions
 - Create a config quest.
-- In your follow quest's controller script, add: `ConfigQuest.Start()` under `SetFollower`, like so: 
+- In your **FollowQuest**'s controller script, add: `ConfigQuest.Start()` under `SetFollower`, like so: 
 ```
 Quest Property ConfigQuest Auto
 
@@ -296,10 +306,10 @@ endFunction
 ```
 - To save space, I've only added these two stats. One to showcase increasing trust, and the other to decrease trust.
 - Refer to this document to see what other stats you can use: [QueryStat](https://ck.uesp.net/w/index.php?title=QueryStat_-_Game)
-- In the Quest Stages tab, add this:
+- In the *Quest Stages* tab, add this:
 
 ![img](https://imgur.com/ZjOdsO5.png)
-- In your follow quest's controller script (the one with functions like `Function SetFollower(ObjectReference FollowerRef)`, `Function FollowerWait()`), add:
+- In your **FollowQuest**'s controller script (the one with functions like `Function SetFollower(ObjectReference FollowerRef)`, `Function FollowerWait()`), add:
 ```
 ;==============Relationship System==============
 
@@ -442,12 +452,12 @@ endFunction
 - Let's go back and look at the properties we'll need to define, as well as how to even get the scripts running in the first place.
 - Make a global variable: `PlayerReactionsVar`. Variable type is short, and value is 0.
 - Config script: `UpdateInterval` is 1.
-- Config script: for `ReferenceAlias RNPC`, you'd pick your follower's reference alias that is in your follow quest.
-- Config script: see where it says `ControllerScriptName property DataStorage auto`? That should be referring to your follow quest's script.
-- Follow Quest script: `SecondsBetweenPeriodicUpdates` is 30.
+- Config script: for `ReferenceAlias RNPC`, you'd pick your follower's reference alias that is in your **FollowQuest**.
+- Config script: see where it says `ControllerScriptName property DataStorage auto`? That should be referring to your **FollowQuest**'s script.
+- **FollowQuest** script: `SecondsBetweenPeriodicUpdates` is 30.
 - As mentioned at the very top of this document, you will need to rename these generic properties to suit your needs.
 - These two scripts from two different quests need each other.
-- Make a new scene. It can be in your follow quest: `PlayerReactionsScene`.
+- Make a new scene. It can be in your **FollowQuest**: `PlayerReactionsScene`.
 
 ![img](https://imgur.com/P2VGEsy.png)
 ![img](https://imgur.com/CO00dtK.png)
@@ -510,12 +520,12 @@ EndFunction
 - See the number `35561`? You get that DEC number by using a programmer calculator. You need the REF ID of the actor:
 
 ![img](https://imgur.com/7Ars1Lt.png)
-- On your follow quest, add a reference alias for... let's just say Inigo.
+- On your **FollowQuest**, add a reference alias for... let's just say Inigo.
 
 ![img](https://imgur.com/11zMBcg.png)
 ![img](https://imgur.com/Ru6o9OK.png)
 - You don't need to select anything for fill type since it's forced via script.
-- Side note: To check the box for Allow Reserved if it's greyed out, press `CTRL SHIFT R`.
+- Side note: To check the box for *Allow Reserved* if it's greyed out, press `CTRL SHIFT R`.
 
 ![img](https://imgur.com/z0cMyqi.png)
 - Let's pretend you want your follower to begin the interaction with Inigo. Let's do this via the Idle tab.
@@ -524,10 +534,10 @@ EndFunction
 
 - This is something you'll want to customize, naturally.
 - You don't see it in the picture, but I also have `IsSneaking == 0.` You can also do `GetRandomPercent`. Up to you! Check the box for Random, and then maybe even have a `GetStage` going for a quest that will handle that actor's stages.
-- In the End Papyrus Fragment, you're going to want a `Scene.Start()`.
+- In the *End: Papyrus Fragment*, you're going to want a `Scene.Start()`.
 - With that said, let's make a quest for Inigo.
-- Some mod authors make them Start Game Enabled, but you can alternatively do a `Quest.Start()` where you have the first ever `Scene.Start()`.
-You will be using the Quest Stages tab as memory. "Has this scene been played? Because we don't want it to play again."
+- Some mod authors make them *Start Game Enabled*, but you can alternatively do a `Quest.Start()` where you have the first ever `Scene.Start()`.
+You will be using the *Quest Stages* tab as memory. "Has this scene been played? Because we don't want it to play again."
 
 ![img](https://imgur.com/m99gxeQ.png)
 
