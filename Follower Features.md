@@ -468,9 +468,74 @@ float __moderateAssessment = 0.2
 float __majorAssessment = 0.5
 ```
 ## Patchless integration
-- Create a mod handler quest. Start game enabled, run once boxes checked.
+- Create a mod handler quest. Start game enabled and run once boxes checked.
 - Make a new reference alias.
 - Specific reference: Player. 
 
 ![img](https://imgur.com/88JTUNh.png)
 - Add a script in that alias.
+```
+ScriptName ModChecker Extends ReferenceAlias
+
+Actor Property Follower Auto
+ReferenceAlias Property FollowerAlias Auto
+GlobalVariable Property FollowerRecruited Auto
+
+Function ModCheck(ReferenceAlias FollowerAlias, Int FormID, String FileName)
+  If FollowerAlias.getref() == None
+    If Game.GetFormFromFile(FormID, FileName)
+      ObjectReference FollowerRef = Game.GetFormFromFile(FormID, FileName) as ObjectReference
+      FollowerAlias.ForceRefTo(FollowerRef)
+    EndIf
+  EndIf
+EndFunction
+
+Event OnInit()
+  Self.CheckAllMods()
+EndEvent
+
+Event OnPlayerLoadGame()
+  If FollowerAlias.getref() == None && FollowerRecruited.GetValue() == 1 as Float
+    Follower.ForceRefTo(Follower as ObjectReference)
+  EndIf
+  Self.CheckAllMods()
+EndEvent
+
+Function CheckAllMods()
+	Utility.wait(3 as Float)
+	Self.ModCheck(InigoAlias, 35561, "Inigo.esp")
+EndFunction
+```
+
+- See the number `35561`? You get that DEC number by using a programmer calculator. You need the REF ID of the actor:
+
+![img](https://imgur.com/7Ars1Lt.png)
+- On your follow quest, add a reference alias for... let's just say Inigo.
+
+![img](https://imgur.com/11zMBcg.png)
+![img](https://imgur.com/Ru6o9OK.png)
+- You don't need to select anything for fill type since it's forced via script.
+- Side note: To check the box for Allow Reserved if it's greyed out, press `CTRL SHIFT R`.
+
+![img](https://imgur.com/z0cMyqi.png)
+- Let's pretend you want your follower to begin the interaction with Inigo. Let's do this via the Idle tab.
+
+![img](https://imgur.com/1BC3qto.png)
+
+- This is something you'll want to customize, naturally.
+- You don't see it in the picture, but I also have `IsSneaking == 0.` You can also do `GetRandomPercent`. Up to you! Check the box for Random, and then maybe even have a `GetStage` going for a quest that will handle that actor's stages.
+- In the End Papyrus Fragment, you're going to want a `Scene.Start()`.
+- With that said, let's make a quest for Inigo.
+- Some mod authors make them Start Game Enabled, but you can alternatively do a `Quest.Start()` where you have the first ever `Scene.Start()`.
+You will be using the Quest Stages tab as memory. "Has this scene been played? Because we don't want it to play again."
+
+![img](https://imgur.com/m99gxeQ.png)
+
+- At the very last stage, you can have a script: `Quest.Stop()`.
+- Of course, you do not have to follow this format. This is up to you.
+- Remember to make your first scene with your follower and the other actor! At this point, it's rinse and repeat.
+
+## Combat to Normal (Unique)
+- WIP 
+- I'm just going to share what I have because it's faster. Say you have followers that don't like it when you hunt deer.
+
