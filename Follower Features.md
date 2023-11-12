@@ -129,7 +129,7 @@ endFunction
 
 ![img](https://imgur.com/YV5xuyG.png)
 - Check the boxes that make sense for you. This is what I have for Cappy. For *ActorBase*, I also have `EncHorseSaddledBrown` selected.
-- In the other tabs, like *Traits*, you can leave them as is. You can change what makes sense to your character's horse later, if you wish.
+- In the other tabs, like *Traits*, you can leave them as is. You can change what makes sense for your character's horse later, if you wish.
 - Make sure to drag your horse into the area of your choice, in the render window. *Just a friendly reminder (if you need it) that any accidental clicks can be saved, so make sure to do a clean-up on xEdit later.*
 
 ![img](https://imgur.com/hZvWxOo.gif)
@@ -138,9 +138,12 @@ endFunction
 - Add both the FollowerNoMount and FollowerRide packages in there. **NOTE: The order matters.**
 
 ![img](https://imgur.com/VJkZzWq.png)
-- Do the same with your horse. The Stay package should be above the Follow package.
+- Do the same with your horse (create/select the horse alias). The *Stay* package should be above the *Follow* package.
+
+![img](https://imgur.com/2cw4vSL.png)
+- I wanted to show you what Megara's horse's alias window looks like.
 - Now, select the player in the *Quest Alias* tab.
-- Add a mount script with your prefix.
+- Add a mount script.
 
 ![img](https://imgur.com/Ukp4Pmk.png)
 - Here's a basic code to get you started:
