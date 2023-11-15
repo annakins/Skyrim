@@ -7,7 +7,8 @@ This page is part of the [Skyrim Follower Dialogue Template](https://ko-fi.com/s
 - [Horse Riding](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#horse-riding)
 - [Non-hostile Spell Reactions](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#non-hostile-spell-reactions)
 - [Trust System + Reactions to Player Actions](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#trust-system--reactions-to-player-actions)
-- [Patchless integration](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#patchless-integration)
+- [Patchless Integration](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#patchless-integration)
+- [Home Assignment](https://github.com/annakins/Skyrim/blob/main/Follower%20Features.md#home-assignment)
 - [List of idle animations for dialogue](https://www.youtube.com/watch?v=ws6EaXQMBgs)
 - [A really awesome resource](https://deck16.net/post/22645519500/making-a-unique-voiced-follower-in-skyrim-part-1)
 ## A Quick Note
@@ -205,6 +206,9 @@ endFunction
 ```
 - When the player mounts, so does the follower - and if the horse is not near you, they get moved to where you are.
 - Define your properties after!
+- Let's make sure your horse is owned by your follower. Go to the cell where your horse is. And then edit the ref for your horse actor. Under *Ownership*, go ahead and select your follower.
+
+![img](https://imgur.com/sJrur3E.png)
 
 ## Non-hostile Spell Reactions
 - Make a new MGEF.
@@ -547,6 +551,57 @@ You will be using the *Quest Stages* tab as memory. "Has this scene been played?
 - At the very last stage, you can have a script: `Quest.Stop()`.
 - Of course, you do not have to follow this format. This is up to you.
 - Remember to make your first scene with your follower and the other actor! At this point, it's rinse and repeat.
+
+## Home Assignment
+- In `aaamarkers` or a cell of your choice that keeps all your markers, drag an XMarker into the render window.
+
+![img](https://imgur.com/OF9XKOL.gif)
+
+![img](https://imgur.com/zN2WhyH.png)
+- Right-click > Edit. Name it accordingly.
+- Create a new global variable, like `Homevar`. So, I suppose, `JJ13HomeVar`. Variable type is *short* and value is *0*. Remember to use prefixes for your sanity.
+
+![img](https://imgur.com/n1LhMrf.png)
+- Create a new topic like, "Want to live here?"
+
+![img](https://imgur.com/UHC8aU5.png)
+
+- Here's what mine looks like. `Homevar` being *0* is important in the conditions list. Anything else, you can customize.
+- For the script, as you can see, here's the code:
+```
+HomeMarker.moveto(Actor)
+HomeVar.SetValue(1)
+```
+- Define your properties!
+- If you want the option to move, which I assume you do, make a new topic like, "Do you want to move?"
+
+![img](https://imgur.com/d7Q0lE4.png)
+
+- `Homevar` is *1* in this case, in the conditions. The script is:
+```
+HomeVar.SetValue(0)
+HomeMarker.Reset()
+```
+- All this is doing is reseting the marker. At this point, it's up to you if you'd like to create a new topic OR link to a new line that says, "Do you want to move here?" And in that case, you would apply the same information from above, with the `homemarker.moveto` script.
+- Remember the Dismiss topic from Joseph Russell's tutorial? We're adding a condition there to differentiate the original editor location from the home location (yes, there are different ways to do this). 
+
+![img](https://imgur.com/LBVYLyd.png)
+
+- The picture above is a regular dismiss line. See that it says `Homevar` *== 0* in the conditions?
+- Now, make a new topic for sending home. OR use the same dismiss one. Personally, I like these to be separated.
+
+![img](https://imgur.com/Li2d37e.png)
+![img](https://imgur.com/jaOJT2C.png)
+
+- Yes, `Homevar` is *1* here.
+
+![img](https://imgur.com/D97M5PL.png)
+
+- On the actual follower, add a sandbox package. The location should be the `Homemarker`.
+
+![img](https://imgur.com/5dvZRFd.png)
+![img](https://imgur.com/QjiWjK3.png)
+- Customize accordingly!
 
 ## Combat to Normal (Unique)
 - WIP 
