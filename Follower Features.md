@@ -597,7 +597,7 @@ HomeMarker.Reset()
 
 ![img](https://imgur.com/D97M5PL.png)
 
-- On the actual follower, add a sandbox package. The location should be the `Homemarker`.
+- On the actual follower, add a sandbox package. The location should be the `Homemarker` (*Near Reference, radius 4096 is what I have*).
 
 ![img](https://imgur.com/5dvZRFd.png)
 ![img](https://imgur.com/QjiWjK3.png)
