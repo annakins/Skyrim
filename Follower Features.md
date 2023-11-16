@@ -572,7 +572,7 @@ You will be using the *Quest Stages* tab as memory. "Has this scene been played?
 HomeMarker.moveto(Actor)
 HomeVar.SetValue(1)
 ```
-- Define your properties!
+- Define your properties! *ObjectReference* for `HomeMarker`.
 - If you want the option to move, which I assume you do, make a new topic like, "Do you want to move?"
 
 ![img](https://imgur.com/d7Q0lE4.png)
