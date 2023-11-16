@@ -601,7 +601,7 @@ HomeMarker.Reset()
 
 ![img](https://imgur.com/5dvZRFd.png)
 ![img](https://imgur.com/QjiWjK3.png)
-- Customize accordingly!
+- Customize accordingly! Not everyone has the same setup as I do. As you can see, I have conditions like `GetQuestRunning AK69KatanaConfigQuest == 0` listed. I personally stop certain relevant quests from running when Katana + Megara are dismissed. They run again when you recruit them.
 
 ## Combat to Normal (Unique)
 - WIP 
