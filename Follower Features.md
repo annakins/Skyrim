@@ -476,6 +476,7 @@ endFunction
 
 ![img](https://imgur.com/sg65gi4.png)
 - Now, note the difference in the `GetVMQuestVariable` condition.
+- If your **FollowQuest** script does not have `conditional` at the top, so like: `Scriptname AK69KatanaController extends Quest  Conditional`, you will need to add that in order to pull data like the `relationshiplevel` for conditions.
 - You should now be able to use the template provided in this document to allow reactions, trust increases, as well as decreases. Your system will be different from what I have, so you may want to change a bunch of floats. Like these: 
 ```
 float MinRating = -5.0
