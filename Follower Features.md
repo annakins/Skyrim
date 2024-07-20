@@ -604,6 +604,52 @@ HomeMarker.Reset()
 ![img](https://imgur.com/QjiWjK3.png)
 - Customize accordingly! Not everyone has the same setup as I do. As you can see, I have conditions like `GetQuestRunning AK69KatanaConfigQuest == 0` listed. I personally stop certain relevant quests from running when Katana + Megara are dismissed. They run again when you recruit them.
 
+## Making a Replacer (Serana Example, High Poly)
+- We'll go with the Racemenu approach. Let's assume you have downloaded the aesthetic mods you'd like to go with already.
+- Let's also assume you have saved the preset so you can make edits if you feel like it. 
+- Take a picture of your skin tone values.
+
+![img](https://imgur.com/gowbpmP.png)
+- Remember the weight you chose (let's avoid those neck seams).
+- Take a picture of the Presets tab (I find this helpful for credits).
+
+![img](https://imgur.com/5p2AnuX.png)
+- Go to the Sculpt tab and hit Export Head.
+![img](https://imgur.com/EagD93W.png)
+- You can close the game. If you find out that something looks wrong in the exported nif file you'll open soon, you may need to re-open the game and re-export the head.
+- Make a new folder in your mods directory, name it after your mod name.
+- Open Creation Kit and load any required dependencies. Since we're working on Serana in this example, we're just double-clicking Dawnguard. Proceed even if there is no active file.
+- Hit Save and name your mod. Now you have an .esp! Make sure it's in the folder you created.
+- Install [NifSkope](https://github.com/niftools/nifskope/releases) if you don't have it yet. 
+
+![img](https://imgur.com/BQpqcDX.png)
+- Time to track down the assets you used. Let's open up your exported head (the nif file). So, `Data > SKSE > Plugins > Chargen`. 
+
+![img](https://imgur.com/fx4CT8P.png)
+![img](https://imgur.com/Cxb2mbi.png)
+
+- We'll need to grab the meshes and textures of each of the assets you used. Expand `BSDynamicTriShape > BSLightingShaderProperty > BSShaderTextureSet` so you can see the textures used.
+- Let's start with the high poly head.
+- You may have to unpack the High Poly Head bsa ([BSA Unpacker](https://www.nexusmods.com/skyrimspecialedition/mods/974)).
+- Copy the necessary tri and nif files.
+
+![img](https://imgur.com/RB2Ekaw.png)
+- Time to decide how you want to manage your folder structure. 
+
+![img](https://imgur.com/G1PvzSm.png)
+- Let's grab the high poly brows, too.
+
+![img](https://imgur.com/9KcAnfP.png)
+- Let's quickly cover the hair example. Go ahead and copy and paste the hair nifs and tris. The hair you picked may or may not have a scalp.
+
+![img](https://imgur.com/ja5s4Hi.png)
+- Make sure to grab the textures for the hair also.
+- *This is where you also decide if you'll be leaving the skin textures up to the user, or also make those standalone.*
+- This is a game of copy-paste for the rest of the assets at this point. Let's move on to texture sets. Open up the Creation Kit.
+
+
+
+https://www.youtube.com/watch?v=2Xt_10H-a8A&t=3309s
 ## Combat to Normal (Unique)
 - WIP 
 - I'm just going to share what I have because it's faster. Say you have followers that don't like it when you hunt deer.
