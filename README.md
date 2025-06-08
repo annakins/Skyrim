@@ -73,7 +73,7 @@ Select everything in the folder EXCEPT gpu.txt and copy it into the folder you j
 - Download here: https://code.visualstudio.com/
 - You can choose a different directory to install it in.
 - Setup: Check all boxes under *Other*.
-- Open VS Code. Go to File > Preferences > Extensions `CTRL+SHIFT+X`.
+- Open VS Code and make sure you are in trusted mode. Go to File > Preferences > Extensions `CTRL+SHIFT+X`.
 - Look up `Papyrus` by Joel Day. Install. **Switch to the pre-release version**.
 - Look up `Workspace Explorer` by Tom Saunders. Install.
 - Now, go to File > Preferences > Settings `CTRL+,`.
